@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dabeeo GIS Editor</title>
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+
+    <!-- 레프트 메뉴박스 가로 스크롤 크기조절   -->
+    <script src="javascript/LeftMenuBoxScroll.js" type="text/javascript" ></script>
+    <!-- <script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script> -->
+    
+    <!-- 레프트 메뉴박스 클릭   -->
+    <script src="javascript/jquery-3.5.1.min.js" type="text/javascript" ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    
+</head>
+
+
+<body>
+    
+<div class="header">
+    <a href="" class="logo"><img src="img/common/logo.png" alt="Dabbeo GIS Editor logo" />Dabeeo GIS Editor <span>&nbsp; with EARTHEYE.Ai</span></a>
+    <div class="gnb">
+            <img src="img/common/gnbLanguage.png" alt="user" />
+            <select>
+                <option>Korean</option>
+                <option>English</option>
+            </select>
+        <img src="img/common/gnbUser.png" alt="user" />
+        <span>mango2020@gmail.com</span>
+
+        <button>로그아웃</button>
+        <button>관리자페이지</button>
+    </div>
+
+</div>
+<div class="loginContainer">
+    <div class="leftBG"></div>
+    <div class="rightBG"></div>
+    <h1 class="hereTit">Here you can Login</h1>
+    <h2 class="hereSubTit"><a href="">Join us</a></h2>
+    <div class="userBox">
+        <h1>Login</h1>
+        <h3 class="tit">작업공간 선택</h3>
+        <select id="roleSelector" class="form-control email">
+            <option value="" selected>직접입력</option> 
+            <option value="naver.com">naver.com</option> 
+            <option value="hanmail.net">hanmail.net</option> 
+            <option value="hotmail.com">hotmail.com</option> 
+            <option value="nate.com">nate.com</option> 
+            <option value="yahoo.co.kr">yahoo.co.kr</option> 
+            <option value="empas.com">empas.com</option> 
+            <option value="dreamwiz.com">dreamwiz.com</option> 
+            <option value="freechal.com">freechal.com</option> 
+            <option value="lycos.co.kr">lycos.co.kr</option> 
+            <option value="korea.com">korea.com</option> 
+            <option value="gmail.com">gmail.com</option> 
+            <option value="hanmir.com">hanmir.com</option> 
+            <option value="paran.com">paran.com</option>
+
+        </select>
+        <h3 class="tit">아이디 또는 이메일</h3>
+        <input type="text" name="" value="" placeholder="아이디 또는 이메일" />
+        <h3 class="tit">비밀번호</h3>
+        <input type="password" name="" value="" placeholder="비밀번호" />
+
+        <button class="loginBtn">로그인</button>
+    </div>
+
+
+    <div class="login_footer">
+        <h1>Dabeeo GIS Editor </h1>
+        <h2>with EARTHEYE.Ai</h2>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
