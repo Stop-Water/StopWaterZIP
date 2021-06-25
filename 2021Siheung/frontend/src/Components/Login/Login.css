@@ -1,0 +1,84 @@
+.loginWrap {
+  width: 100%;
+  height: 100vh;
+  background-color: #1b396a;
+}
+
+.loginBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f3f4f8;
+  border-radius: 10px;
+}
+
+.loginBox h3 {
+  text-align: center;
+  letter-spacing: -0.1rem;
+  font-size: 2.3rem;
+  color: #333;
+  font-weight: 800;
+}
+
+.errorSpan {
+  margin-top: 1.5rem;
+  text-align: left;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.loginIMG {
+  margin: 1.5rem 0 3rem;
+  text-align: center;
+}
+.loginIMG img {
+  max-width: 472px;
+  width: 80%;
+}
+
+.IDPW p {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.IDPW input {
+  width: 100%;
+  border: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.loginBtn {
+  float: right;
+  margin-top: 3rem;
+}
+
+.loginBtn {
+  padding: 1rem 3.5rem;
+  background-color: #f3f4f8;
+  border: 2px solid #009ee0;
+  border-radius: 5px;
+  color: #009ee0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.loginBtn:hover {
+  background-color: #009ee0;
+  color: #fff;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) {
+  .loginBox {
+    width: 80%;
+  }
+}

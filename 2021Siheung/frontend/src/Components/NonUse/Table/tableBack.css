@@ -1,0 +1,49 @@
+.dataTable {
+    width: 100%;
+    overflow: hidden;
+  }
+  .ReactVirtualized__Table {
+    width: 100%;
+    float: left;
+    font-size: 1.5rem;
+    display: table;
+  }
+  
+  .table-row {
+    display: flex;
+    /* float:left; */
+    clear: both;
+  }
+  
+  .column,
+  .ReactVirtualized__Table__headerColumn {
+    float: left;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ReactVirtualized__Grid.ReactVirtualized__Table__Grid {
+    margin-top: 5px;
+  }
+  
+  .ReactVirtualized__Table__headerColumn {
+    background-color: #dfeef9;
+    color: #747c85;
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-radius: 5px;
+    margin: 0 2px;
+  }
+  .ReactVirtualized__Table__rowColumn {
+    background-color: #fff;
+    margin: 2px;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .dataTable {
+      /* margin: 80px 0px 0; */
+    }
+  }
+  

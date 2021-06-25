@@ -1,0 +1,137 @@
+.leftMenu {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  padding: 20px 0 0;
+  width: 150px;
+  height: calc(100vh - 60px);
+  min-height: 710px;
+  background-color: #fff;
+  z-index: 101;
+  border-radius: 5px;
+  text-align: center;
+  transition: all ease 2s 0s;
+  font-size: 10px;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+}
+.innerRelative {
+  position: relative;
+  height: 100%;
+}
+
+.leftMenuNav {
+  margin: 15px 0;
+  width: 100%;
+}
+.leftMenuNav .over {
+  background-color: #009ee0;
+}
+.leftMenuNav .over p {
+  color: #fff;
+}
+
+.leftMenuNav a {
+  padding: 30px 0 25px;
+  display: block;
+  cursor: pointer;
+  color: #4b4b4b;
+}
+.leftMenuNav a:hover {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+.leftMenuNav a:hover p {
+  border-bottom: 1px solid #009ee0;
+}
+
+.leftMenuNav a p {
+  margin: 8px 0 0;
+  padding: 0 5px 5px 3px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.leftMenuNav a div {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.leftMenuNav a.leftLogoutBtn {
+  padding: 0;
+}
+.leftMenuNav a.leftLogoutBtn p {
+  border: 1px solid #ddd;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+}
+
+.leftMenu01 {
+  background: url('/img/common/leftMenu01.png') no-repeat;
+}
+.leftMenu02 {
+  background: url('/img/common/leftMenu02.png') no-repeat;
+}
+.leftMenu03 {
+  background: url('/img/common/leftMenu03.png') no-repeat;
+}
+.leftMenu04 {
+  background: url('/img/common/leftMenu04.png') no-repeat;
+}
+.leftMenu05 {
+  background: url('/img/common/leftMenu05.png') no-repeat;
+}
+.leftMenu06 {
+  background: url('/img/common/leftMenu06.png') no-repeat;
+}
+
+.over .leftMenu01 {
+  background: url('/img/common/leftMenu01Over.png') no-repeat;
+}
+.over .leftMenu02 {
+  background: url('/img/common/leftMenu02Over.png') no-repeat;
+}
+.over .leftMenu03 {
+  background: url('/img/common/leftMenu03Over.png') no-repeat;
+}
+.over .leftMenu04 {
+  background: url('/img/common/leftMenu04Over.png') no-repeat;
+}
+.over .leftMenu05 {
+  background: url('/img/common/leftMenu05Over.png') no-repeat;
+}
+.over .leftMenu06 {
+  background: url('/img/common/leftMenu06Over.png') no-repeat;
+}
+
+/* 세로 화면 작을때 */
+@media only screen and (max-height: 770px) {
+  .leftMenu {
+    min-height: auto;
+    height: calc(100vh - 60px);
+  }
+  .leftMenuNav a {
+    padding: 13px 0 7px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .leftMenu {
+    height: auto;
+  }
+  .copyright {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .leftMenu {
+    display: none;
+    font-size: 7px;
+  }
+}

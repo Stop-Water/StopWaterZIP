@@ -1,0 +1,87 @@
+.popup-content {
+  margin: 5% 7% !important;
+  background: #fff;
+  width: 86%;
+  height: auto;
+  padding: 5px;
+  border: 1px solid #d7d7d7;
+  display: block;
+  justify-content: space-between;
+  position: relative;
+  overflow-y: scroll;
+}
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}
+.popup-arrow {
+  -webkit-filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(0 -3px 3px rgba(0, 0, 0, 0.16));
+  color: #fff;
+  stroke-width: 2px;
+  stroke: #d7d7d7;
+  stroke-dasharray: 30px;
+  stroke-dashoffset: -54px;
+}
+.airWrapWidth{
+  padding:2.5rem;
+  width:auto;
+  height:auto;
+}
+.airWrap {
+  width: 18%;
+  height: 80%;
+  margin: 0 1%;
+  float:left;
+}
+
+.noData {
+  font-size: 15px;
+}
+
+.airKorea_Info {
+  margin:2rem 2rem 5rem;
+  text-align: center;
+  font-size:1.6rem;
+}
+
+.air_warning {
+  color: red;
+}
+
+
+@media all and (max-width: 1500px) {
+  .popup-content {
+    margin: 5% 5% !important;
+    width: 90%;
+  }
+  .airWrap {
+    width: 31%;
+  }
+}
+@media all and (max-width: 800px) {
+  
+  .airWrap {
+    width: 48%;
+  }
+}
+@media all and (max-width: 600px) {
+  .popup-content {
+    margin: 20% 6% !important;
+    width: 86%;
+  }
+  .airWrapWidth{
+    padding:2rem;
+  }
+  .airWrap {
+    width:88%;
+    margin: 0 6% ;
+  }
+}

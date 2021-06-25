@@ -1,0 +1,70 @@
+.subCont {
+  padding: 20px;
+}
+.basicTable {
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  min-width: 300px;
+  font-size:10px;
+}
+.basicTable tr {
+  display: table-row;
+  font-size: 1.4em;
+}
+.basicTable tr:hover th,
+.basicTable tr:hover td {
+  background-color: #edeeef;
+}
+.basicTable th,
+.basicTable td {
+  padding: 1.0em 0.5em;
+  display: table-cell;
+  border-radius: 5px;
+  color: #747c85;
+  text-align: center;
+}
+.basicTable th {
+  background-color: #f6f6f7;
+  font-weight: bold;
+  font-weight: 800;
+}
+.basicTable td {
+  background-color: #fbfbfb;
+  font-weight: 500;
+}
+.tableScrollX {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.tableScroll table {
+  width: 1160px;
+  margin: 0 auto;
+}
+.tableScrollY {
+  height: 100%;
+  overflow: auto;
+  /* width: 700px; */
+}
+.tableScrollY table {
+  position: relative;
+  width: 100%;
+}
+.tableScrollY table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .basicTable {
+    font-size:8px;
+  }
+  .tableScrollY table thead th {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,746 @@
+.subContWrap {
+}
+
+.subContBGWrap {
+  width: 100%;
+  height: 100%;
+  background: url(/img/common/subContBG.gif) 0 0 repeat-x;
+  background-attachment: local;
+}
+.subContBGWrap.boardBG {
+  background: url(/img/common/subContBG.gif) 0 0 repeat-x;
+  background-size: 100% 250px;
+}
+.subContainer {
+  padding: 30px 50px 0 200px;
+}
+
+.subHead {
+  font-size: 10px;
+}
+.subTitBox {
+  position: relative;
+  margin-bottom: 25px;
+}
+h1.subTit {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 800;
+}
+.subTitBox h4 {
+  position: absolute;
+  right: 1rem;
+  bottom: 0rem;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.subTitBox {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* .subTab:after{
+    content: '';
+    display: block;
+    clear:both;
+} */
+.subTab a {
+  width:22rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.8rem 0rem;
+  display: block;
+  overflow: hidden;
+}
+.subTab a:hover {
+  color: #ffe600;
+  text-decoration: none;
+}
+.subTab span {
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffe600;
+  display: none;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.leftTab {
+  float: left;
+  border-radius: 50px 0 0 50px;
+  border: 1px solid #009ee0;
+  cursor: pointer;
+}
+.rightTab {
+  float: left;
+  border-radius: 0 50px 50px 0;
+  border: 1px solid #009ee0;
+  cursor: pointer;
+}
+.subTab .over {
+  background-color: #009ee0;
+}
+
+/* 서브 컨텐츠 영역 */
+.subContBox {
+  margin-bottom: 5rem;
+}
+
+/* 검색 박스 */
+.searchBox {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 3rem;
+  display: flex;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+}
+.selectArea {
+  padding: 3rem 1rem;
+  font-size: 1.6rem;
+}
+.selectArea .selectTit {
+  font-size: 1.8rem;
+  color: #394456;
+}
+.selectArea.fog select{
+  width:100%;
+}
+
+.dataSelect {
+  min-width: 170px !important;
+}
+.dataSelect select,
+.dataDetailSelect select {
+  width: 100%;
+}
+
+.dataDetailSelect {
+  padding-left: 0;
+}
+
+.searchArea {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.searchArea button {
+  margin-left: auto;
+}
+
+.searchInfoBox {
+  width: 100%;
+  height: 500px;
+  margin-top: 8rem;
+  background: url('/img/common/seachInfoIMG.png') no-repeat 50% 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+
+/* 관측정보 컨텐츠 영역 */
+/* 왼쪽 박스 */
+.leftChartWrap {
+  margin: 5rem 0;
+  padding-right: 1rem;
+  width: 50%;
+  float: left;
+}
+.ChartTit {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.8rem;
+  color: #394456;
+  font-weight: 800;
+  line-height: 40px;
+}
+.ChartTit.TitBtn {
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+}
+.ChartTitDownBtn {
+  margin-left: auto;
+}
+.ChartCont {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid #eff2f5;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+}
+.chartjs-render-monitor {
+  background-color: initial !important;
+}
+
+/* 오른쪽 박스  */
+.rightTableWrap {
+  margin-top: 5rem;
+  padding-left: 1rem;
+  width: 50%;
+  float: right;
+}
+
+.rightTableBox {
+  overflow-y: auto;
+  max-height: 2140px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+}
+.rightTableBox table {
+  width: 100%;
+
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+}
+.rightTableBox table tr {
+  border-top: 1px solid #ededed;
+  min-height: 0px;
+}
+.rightTableBox table tr td {
+  padding: 1.3rem 0.3rem;
+  word-break: keep-all;
+}
+.rightTableBox table tr td.spotBorder {
+  border-right: 1px solid #ededed;
+}
+
+.rightTableBox table thead td {
+  color: #868686;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+}
+
+/* 지점별 안개탐지 통계 컨텐츠 영역 */
+.fogDataContWrap {
+  margin-top: 8rem;
+}
+.fogDataCont {
+  width: 100%;
+  height: 800px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+.fogDataContWrap .ChartTit {
+  margin-bottom: 1.5rem;
+}
+.dataDetailTit {
+  margin: 0 10px;
+  padding: 5px 23px;
+  border-radius: 5px;
+  background-color: #009ee0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* 시스템 소개 */
+.subContainer.IntroWidth {
+  max-width: 1800px;
+}
+.subIntroMinWidth {
+}
+.SystemIntroContWrap {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 0 3.5rem 3.5rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+.SystemIntroContWrap .row {
+  margin: 0;
+  padding: 0;
+}
+.IntroTit {
+  width: 100%;
+  margin-top: 3.5rem;
+  font-size: 2.3rem;
+  color: #363636;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+}
+
+.IntroBlueTit {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 2rem;
+  color: #009ee0;
+  font-weight: 700;
+}
+
+.IntroTxt {
+  margin-top: 0.5rem;
+  width: 100%;
+  color: #363636;
+  font-size: 1.6rem;
+  line-height:2.5rem;
+}
+.IntroTxt.big{
+  font-size:1.7rem;
+} 
+.IntroTxt span {
+  font-weight: 800;
+  color:#666;
+}
+
+.IntroIconBoxWrap {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.IntroIconBoxTxt {
+  margin: 0 3.5rem;
+}
+.blueBox img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.IoTWrap div {
+  float: left;
+  width: 51%;
+}
+.IoTWrap div.IotGroup03 {
+  float: right;
+  width: 49%;
+  margin-top: -110px;
+}
+.IoTWrap div img {
+  width: 100%;
+  max-width: 650px;
+}
+
+.fogIMG img {
+  width: 100%;
+  max-width: 425px;
+}
+
+/* 정보제공 */
+.grayBox {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #f5f5f5;
+  
+}
+.grayBox.application{
+  line-height: 3.5rem;
+}
+
+.apiProcessIcon img {
+  width: 100%;
+  
+}
+.apiProcessIconWeb{
+  display: block;
+}
+.apiProcessIconMB{
+  display: none;
+  margin:0 auto;
+}
+
+/* 공지사항 */
+.noticeBoard {
+  border-radius: 5px;
+}
+
+/* 글쓰기 div로 변경 */
+.noticeBoard .tableLayout {
+  position:relative;
+  table-layout: fixed;
+  display: table;
+  width: 100%;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: left;
+  background-color: #fff;
+  }
+.columRow{
+  display: table-row;
+}
+.columRow > div{
+  height: 50px;
+  display: table-cell;
+  padding: 1.7rem 1rem; 
+  vertical-align: middle; 
+  border-top: 1px solid #ededed;
+}
+.columRow > div.th{
+  background-color: #f6fafd;
+  width:15%;
+  text-align:center;
+}
+
+
+.noticeBoard table {
+  table-layout: fixed;
+}
+.rightTableBox.noticeBoard table tbody tr td {
+  padding: 1.7rem 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rightTableBox.noticeBoard table tbody tr td.date {
+  word-break: break-word;
+  white-space: pre-line;
+}
+.rightTableBox.noticeBoard table tr td a {
+  text-decoration: none;
+  color: #333;
+}
+.rightTableBox.noticeBoard table tr td a:hover {
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+}
+.TablePaging {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+.MuiPaginationItem-root {
+  font-size: 1rem !important;
+}
+
+/* 공지사항 글쓰기 */
+.noticeBoard.Write th {
+  background-color: #f6fafd;
+}
+/* .noticeBoard.Write .TableEditorContents th {
+  background-color: #000 !important;
+} */
+.noticeBoard.Write td {
+  text-align: left;
+}
+.BoardTextArea {
+  width: 100%;
+  overflow-x: auto !important;
+}
+.BoardTextInput {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 70%;
+}
+.multiBTN {
+  float: right;
+  margin: 3rem 0;
+}
+.multiBTN button {
+  margin-left: 1rem;
+}
+.tui-editor-defaultUI,
+.tui-editor-contents {
+  list-style: inherit !important;
+}
+.tui-editor-defaultUI table th,
+.tui-editor-contents table th {
+  color: #000 !important;
+}
+.TableEditorContents {
+  /* margin: 1.7rem 1rem; */
+  text-align: left;
+}
+
+/* 관리자 - 관측소 정보관리 */
+.adminContWrap {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 0 3.5rem 3.5rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+}
+
+.adminContWrap .selectArea {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+.adminContWrap .selectTit {
+  margin: 0 2rem 0 0;
+}
+.adminContWrap select {
+  width: 50%;
+}
+
+.adminTit {
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  color: #394456;
+}
+
+.adminTableGrid table {
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-right: 1px solid #ededed;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+}
+
+.adminTableGrid table tr {
+  border-top: 1px solid #ededed;
+}
+
+.adminTableGrid table th {
+  background-color: #f6fafd;
+  padding: 1.7rem 0.5rem;
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+}
+.adminTableGrid table th.worker {
+  background-color: #fdfdf6;
+}
+
+.adminTableGrid table td {
+  text-align: left;
+  padding: 1.7rem 1rem;
+}
+
+.adminTableGrid input {
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.adminTableGrid .textarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #ddd;
+}
+
+.adminimgBox {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 1.5rem 1.5rem 0 0;
+  float: left;
+}
+
+.adminimgBox .blackBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.adminimgBox .blackBox:hover {
+  opacity: 1;
+}
+.adminimgBox .removeBtn a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.adminHistory {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-right: 1px solid #ededed;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.08);
+  word-break:break-all;
+}
+.adminHistory tr {
+  border-top: 1px solid #ededed;
+}
+.adminHistory tr td,
+.adminHistory tr th {
+  padding: 1.7rem 0.5rem;
+  border-right: 1px solid #ededed;
+}
+.adminHistory .Attachments a {
+  color: #007bff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .subContBGWrap {
+    height: 100%;
+  }
+  .subContainer {
+    padding: 80px 2%;
+    width: 100%;
+  }
+  .subTitBox {
+    margin-left: 1rem;
+  }
+  .subTitBox h4 {
+    position: relative;
+    left: 0;
+    margin: 1em 0;
+  }
+  .subTab {
+    display: flex;
+  }
+  .subTab .rightTab,
+  .subTab .leftTab {
+    width: 50%;
+  }
+  .subTab a {
+    padding: 2rem 2rem;
+    width:auto;
+  }
+
+  .searchBox {
+    display: block;
+    padding: 1rem;
+  }
+  .selectArea {
+    padding: 1.2rem 0;
+    margin-left: 0rem;
+  }
+  .selectArea select {
+    width: 100%;
+  }
+  .selectArea input[type='date'], .selectArea input[type='month'] {
+    width: 50%;
+    min-width: auto;
+  }
+  .searchInfoBox {
+    margin-top: 3rem;
+    background-size: 150px;
+    height: 300px;
+  }
+
+  .leftChartWrap,
+  .rightTableWrap {
+    clear: both;
+    margin: 1rem 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .rightTableBox {
+    max-height: 800px;
+  }
+
+  /* 지점별 안개탐지 통계 컨텐츠 영역 */
+  .fogDataContWrap {
+    margin-top: 3rem;
+  }
+
+  /* 시스템소개 페이지 */
+  .IntroIconBoxWrap img {
+    width: 30%;
+  }
+  .IoTWrap div {
+    float: initial;
+    width: 100%;
+  }
+  .IoTWrap div.IotGroup03 {
+    float: initial;
+    width: 100%;
+    margin-top: 0;
+  }
+  .col-md-12.col-xl-6.blueBox {
+    padding: 0 !important;
+  }
+
+  /* 공지사항 */
+  .rightTableBox.noticeBoard {
+    max-height: initial;
+  }
+  .TablePaging {
+  }
+  .MuiPaginationItem-root {
+    min-width: auto !important;
+  }
+
+  /* 공지사항 글쓰기 */
+  .BoardTextArea {
+    height: 300px;
+  }
+
+  /* 관리자-관리자 정보관리 */
+  .adminContWrap {
+    padding: 0 1rem 1rem;
+  }
+  .adminTableGrid input {
+    width: 100%;
+  }
+  .adminContWrap select {
+    width: 50%;
+  }
+  .apiProcessIconMB{
+    display: block;
+  }
+  .apiProcessIconWeb{
+    display: none;
+  }
+  
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+  .adminimgBox {
+    float: initial;
+    margin:0 auto;
+    margin-top:3rem;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .selectArea input[type='date'], .selectArea input[type='month'] {
+    width: 45%;
+    min-width: auto;
+  }
+  /* 관리자 정보관리 */
+  .adminContWrap {
+    display: block;
+  }
+  .adminContWrap .selectArea {
+    display: block;
+  }
+  .adminContWrap select {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+}

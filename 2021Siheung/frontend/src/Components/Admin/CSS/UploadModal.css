@@ -1,0 +1,35 @@
+.MDmodal{
+    padding:3rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) ;
+    min-width:25%;
+    background-color:#fff;
+    font-size:1.6rem;
+    
+}
+.modalHeader{
+    padding-bottom:1rem;
+    margin-bottom:1rem;
+    font-size:2.0rem;
+    border-bottom:1px solid #eee;
+    width:100%;
+    font-weight: 800;
+}
+.modalCont{
+    padding: 2rem 1rem;
+    margin-bottom:1rem;
+    min-height: 150px;
+    border-bottom:1px solid #eee;
+
+}
+.modlaText{
+    color:#999;
+}
+.modalUploadBox{
+    padding:1rem;
+    width:100%;
+    border:1px solid #ddd;
+
+}

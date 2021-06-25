@@ -1,0 +1,71 @@
+
+@font-face {
+    font-family: 'NotoKrL';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Light'), local('NotoSans-Light'), url(../NotoFonts/NotoSans-Light.eot);
+    src: url(/NotoFonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+    url(/NotoFonts/NotoSans-Light.woff2) format('woff2'),
+    url(/NotoFonts/NotoSans-Light.woff) format('woff');;
+    }
+    @font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(../NotoFonts/NotoSans-Regular.eot);
+    src: url(/NotoFonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+    url(/NotoFonts/NotoSans-Regular.woff2) format('woff2'),
+    url(/NotoFonts/NotoSans-Regular.woff) format('woff');
+    }
+    @font-face {
+    font-family: 'NotoKrM';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(../NotoFonts/NotoSans-Medium.eot);
+    src: url(/NotoFonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+    url(/NotoFonts/NotoSans-Medium.woff2) format('woff2'),
+    url(/NotoFonts/NotoSans-Medium.woff) format('woff');
+    }
+    @font-face {
+    font-family: 'NotoKrB';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(../NotoFonts/NotoSans-Bold.eot);
+    src: url(/NotoFonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(/NotoFonts/NotoSans-Bold.woff2) format('woff2'),
+    url(/NotoFonts/NotoSans-Bold.woff) format('woff');
+    }
+
+
+
+.subCont{padding:20px;}
+.basicTable{width:100%;}
+.basicTable th, .basicTable td{padding:10px 5px;}
+.basicTable th{border-bottom:1px solid #dee2e6; border-top:1px solid #dee2e6; background-color:#e9ecef; color:#495057;text-align: center; font-size:13px; font-weight:bold;}
+.basicTable td{font-size:13px; border-bottom:1px solid #dee2e6;}
+
+.tableScrollX{width:100%;overflow-x: auto; white-space: nowrap;}
+.tableScroll table{width:1160px;margin:0 auto;}
+.tableScrollY{ max-height: 150px; }
+.tableScrollY{position:relative;}
+.tableScrollY table{}
+
+
+.ol-zoom-in{background-color:#000 !important; font-size:0; background: url('../imgs/mapIconPlus.png') no-repeat #fff!important;}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+/* ... */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+/* ... */
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+/* ... */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .subCont{width:1200px; margin:0 auto;}
+}

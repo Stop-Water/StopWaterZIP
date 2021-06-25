@@ -1,0 +1,481 @@
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+.playButton {
+  padding: 0px 23px;
+  background-color: #fff;
+  border: none;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.13);
+}
+
+.playButton.act {
+  height: 61px;
+  line-height: 61px;
+  cursor: wait;
+}
+
+.playButton:focus {
+  outline: none;
+}
+
+.weatherContainer {
+  position: absolute;
+  width: 220px;
+  height: 190px;
+  bottom: 60px;
+  right: 20px;
+  background-color: #017cfe;
+  color: white;
+  opacity: 0.8;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 30px;
+}
+
+/* 위험안내 메세지 */
+.warningMassege:before {
+  content: '';
+  border: 1px solid #ff6a7f;
+  background-color: #ff6a7f;
+  width: 3px;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+.warningMassege {
+  position: relative;
+  top: 10px;
+  left: 0;
+  padding: 10px 20px;
+  width: 96%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 9;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.warningMassege .timeTit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 3px 0 0 30px;
+  color: #ff6a7f;
+  font-size: 1.3em;
+  line-height: 20px;
+  background: url('/img/map/warningMassegeIcon.png') no-repeat;
+}
+
+.warningMassege .timeTit:after {
+  content: '';
+  margin-left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff6a7f;
+  display: inline-block;
+}
+
+.warningMassege p {
+  margin: 5px 0 0;
+  font-size: 1.6em;
+}
+
+/* 지도 마커 */
+.mapMarker {
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  z-index: 8;
+  white-space: nowrap;
+}
+
+.mapBalloon {
+  padding: 10px 10px;
+  color: #fff;
+  position: relative;
+  border-radius: 50px;
+  text-align: center;
+  width: 12rem;
+}
+
+.mapBalloon:before {
+  content: '';
+  display: inline-block;
+  border-top: 8px solid rgba(255, 188, 91, 0.9);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.mapBalloon.FogBalloon {
+  width: 190px;
+}
+.mapBalloon.FogBalloon p {
+  font-size: 15px;
+}
+.mapBalloon.FogBalloon.big {
+  width: 230px;
+}
+.mapBalloon.FogBalloon.big p {
+  font-size: 17px;
+}
+
+.mapBalloon .tit {
+  margin-bottom: 3px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.mapBalloon p {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.mapPointWrap {
+  display: flex;
+  align-items: center;
+  margin: 5px auto 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.mapPoint {
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  background-color: #ffbc5b;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+
+/* 안개없음 */
+.mapMarker.sunny .mapBalloon {
+  background-color: rgba(86, 170, 226, 0.8);
+}
+.mapMarker.sunny .mapBalloon.big {
+  border: 5px solid #2982d3;
+}
+.mapMarker.sunny .mapBalloon.big:after {
+  border-top: 17px solid #2982d3;
+}
+.mapMarker.sunny .mapBalloon:before {
+  border-top: 15px solid #76b9e6;
+}
+.mapMarker.sunny .mapPointWrap {
+  background-color: rgba(0, 158, 224, 0.4);
+}
+.mapMarker.sunny .mapPoint {
+  background-color: #2982d3;
+}
+
+/* 옅은 안개 */
+.mapMarker.cloudy .mapBalloon {
+  background-color: rgba(255, 188, 91, 0.9);
+}
+.mapMarker.cloudy .mapBalloon.big {
+  border: 5px solid #ffa20f;
+}
+.mapMarker.cloudy .mapBalloon.big:after {
+  border-top: 17px solid #ffa20f;
+}
+.mapMarker.cloudy .mapBalloon:before {
+  border-top: 15px solid #fec26a;
+}
+.mapMarker.cloudy .mapPointWrap {
+  background-color: rgba(255, 188, 91, 0.4);
+}
+.mapMarker.cloudy .mapPoint {
+  background-color: #ffbc5b;
+}
+
+/* 짙은 안개 */
+/*.mapMarker.fog {
+  left: 380px;
+}*/
+.mapMarker.fog .mapBalloon {
+  background-color: rgba(250, 79, 27, 0.9);
+}
+.mapMarker.fog .mapBalloon.big {
+  border: 5px solid #c41c01;
+}
+.mapMarker.fog .mapBalloon.big:after {
+  border-top: 17px solid #c41c01;
+}
+.mapMarker.fog .mapBalloon:before {
+  border-top: 15px solid #f95f30;
+}
+.mapMarker.fog .mapPointWrap {
+  background-color: rgba(239, 69, 29, 0.4);
+}
+.mapMarker.fog .mapPoint {
+  background-color: #fa4f1b;
+}
+
+/* 강수 */
+.mapMarker.rain .mapBalloon {
+  background-color: rgba(11, 25, 111, 0.8);
+}
+.mapMarker.rain .mapBalloon.big {
+  border: 5px solid #363e67;
+}
+.mapMarker.rain .mapBalloon.big:after {
+  border-top: 17px solid #0b196f;
+}
+.mapMarker.rain .mapBalloon:before {
+  border-top: 13px solid #3a458a;
+}
+.mapMarker.rain .mapPointWrap {
+  background-color: rgba(4, 15, 79, 0.8);
+}
+.mapMarker.rain .mapPoint {
+  background-color: #3a458a;
+}
+
+
+
+/* 기온/습도 */
+.mapMarker.Default .mapBalloon {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #555;
+}
+.mapMarker.Default .mapBalloon.big {
+  border: 5px solid #bdbdbd;
+}
+.mapMarker.Default .mapBalloon.big:after {
+  border-top: 18px solid #bdbdbd;
+}
+.mapMarker.Default .mapBalloon:before {
+  border-top: 13px solid #fdfdfd;
+}
+.mapMarker.Default .mapPointWrap {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.mapMarker.Default .mapPoint {
+  background-color: #2982d3;
+}
+
+
+/* 영하기온 */
+.mapMarker.subzero .mapBalloon {
+  background-color: rgba(0, 26, 158, 0.8);
+}
+.mapMarker.subzero .mapBalloon.big {
+  border: 5px solid #061043;
+}
+.mapMarker.subzero .mapBalloon.big:after {
+  border-top: 17px solid #061043;
+}
+.mapMarker.subzero .mapBalloon:before {
+  border-top: 13px solid #3146af;
+}
+.mapMarker.subzero .mapPointWrap {
+  background-color: rgba(4, 15, 79, 0.8);
+}
+.mapMarker.subzero .mapPoint {
+  background-color: #3146af;
+}
+
+
+/* 미세먼지 매우좋음 */
+.mapMarker.dustVeryGood .mapBalloon {
+  background-color: rgba(72, 191, 13, 0.8);
+}
+.mapMarker.dustVeryGood .mapBalloon.big {
+  border: 5px solid #3c9f0c;
+}
+.mapMarker.dustVeryGood .mapBalloon.big:after {
+  border-top: 17px solid #3c9f0c;
+}
+.mapMarker.dustVeryGood .mapBalloon:before {
+  border-top: 13px solid #6bca3b;
+}
+.mapMarker.dustVeryGood .mapPointWrap {
+  background-color: rgba(92, 195, 41, 0.8);
+}
+.mapMarker.dustVeryGood .mapPoint {
+  background-color: #5cc329;
+}
+
+
+/* 점검중 */
+.mapMarker.checking .mapBalloon {
+  background-color: rgba(159, 159, 159, 0.8);
+}
+.mapMarker.checking .mapBalloon.big {
+  border: 5px solid #787878;
+}
+.mapMarker.checking .mapBalloon.big:after {
+  border-top: 15px solid #787878;
+}
+.mapMarker.checking .mapBalloon:before {
+  border-top: 13px solid #b0b0b0;
+}
+.mapMarker.checking .mapPointWrap {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.mapMarker.checking .mapPoint {
+  background-color: #2982d3;
+}
+
+/* 말풍선 클릭  */
+.mapBalloon.big {
+  color: #fff;
+  position: relative;
+  border-radius: 200px;
+  text-align: center;
+  width: 13rem;
+  border: 3px solid #fff;
+  padding: 10px;
+}
+.mapBalloon.big:after {
+  content: '';
+  display: inline-block;
+  border-top: 16px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -1;
+}
+
+.mapBalloon.big p {
+  font-size: 1.8rem;
+}
+
+.btn.mapfocus,
+.btn.plu,
+.btn.min {
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+}
+.btn.mapfocus {
+  position: absolute;
+  bottom: 112px;
+  left: 180px;
+  width: 35px;
+  height: 35px;
+  background: url('/img/map/mapbtnfocusIcon.png') no-repeat 50% 50%
+    rgba(255, 255, 255, 0.8);
+}
+
+.btn.plu {
+  position: absolute;
+  bottom: 70px;
+  left: 180px;
+  width: 35px;
+  height: 35px;
+  background: url('/img/map/mapbtnPluIcon.png') no-repeat 50% 50%
+    rgba(0, 158, 224, 0.8);
+}
+
+.btn.min {
+  margin-top: 5px;
+  position: absolute;
+  bottom: 30px;
+  left: 180px;
+  width: 35px;
+  height: 35px;
+  background: url('/img/map/mapbtnMinIcon.png') no-repeat 50% 50%
+    rgba(0, 158, 224, 0.8);
+}
+
+/*  cctv popup */
+.cctvPopBG {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cctvPop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  z-index: 999;
+}
+.cctvPop .tit {
+  padding: 0 1rem 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.cctvPop .tit h2 {
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: 700;
+}
+.cctvPop span {
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+.cctvVideo {
+  width: 450px;
+  height: 250px;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* ... */
+}
+
+@media only screen and (max-width: 1200px) {
+  .warningMassege {
+    width: 92%;
+    font-size: 8px;
+    top: 7px;
+  }
+  .warningMassege .timeTit {
+    font-size: 1.6em;
+  }
+
+  .btn.mapfocus {
+    bottom: 101px;
+    left: 20px;
+  }
+  .btn.plu {
+    bottom: 60px;
+    left: 20px;
+  }
+  .btn.min {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .mapBalloon.width420 {
+    width: 11rem;
+    padding: 8px;
+  }
+  .mapBalloon.big.width420 {
+    width: 13rem;
+  }
+  .cctvVideo {
+    width: 300px;
+    height: auto;
+  }
+}

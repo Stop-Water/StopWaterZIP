@@ -1,0 +1,141 @@
+.weatherNav {
+  position: absolute;
+  top: 182px;
+  left: 180px;
+  padding: 2.5em 0;
+  width: 45px;
+  background-color: #009ee0;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 9;
+  font-size: 10px;
+}
+.weatherNav ul {
+  margin: 0;
+}
+
+.weatherNav li {
+  margin-bottom: 4em;
+  position: relative;
+  cursor: pointer;
+}
+.weatherNav li:last-child {
+  margin-bottom: 0px;
+}
+
+.weatherNav li span {
+  position: absolute;
+  top: 2px;
+  left: 55px;
+  font-size: 1.6em;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #333;
+  text-shadow: 1px 1px 2px White, 1px -1px 2px White, -1px 1px 2px White,
+    -1px -1px 2px White;
+}
+.weatherNav li span.dustMenuText{
+  /* top:-7px; */
+}
+.weatherNav li span.dustMenuText .num{
+  font-size:1.3rem;
+  position: initial;
+  font-weight: 800;
+}
+
+.weatherNav li div {
+  width: 45px;
+  height: 28px;
+  display: inline-block;
+}
+
+.weatherNav01 {
+  background: url('/img/common/weatherNav01.png') no-repeat 50% 50%;
+}
+.weatherNav02 {
+  background: url('/img/common/weatherNav02.png') no-repeat 50% 50%;
+}
+.weatherNav03 {
+  background: url('/img/common/weatherNav03.png') no-repeat 50% 50%;
+}
+.weatherNav04 {
+  background: url('/img/common/weatherNav04.png') no-repeat 50% 50%;
+}
+.weatherNav05 {
+  background: url('/img/common/weatherNav05.png') no-repeat 50% 50%;
+}
+.weatherNav06 {
+  background: url('/img/common/weatherNav06.png') no-repeat 50% 50%;
+}
+
+.weatherNav01.over {
+  background: url('/img/common/weatherNav01Over.png') no-repeat 50% 50%;
+}
+.weatherNav02.over {
+  background: url('/img/common/weatherNav02Over.png') no-repeat 50% 50%;
+}
+.weatherNav03.over {
+  background: url('/img/common/weatherNav03Over.png') no-repeat 50% 50%;
+}
+.weatherNav04.over {
+  background: url('/img/common/weatherNav04Over.png') no-repeat 50% 50%;
+}
+.weatherNav05.over {
+  background: url('/img/common/weatherNav05Over.png') no-repeat 50% 50%;
+}
+.weatherNav06.over {
+  background: url('/img/common/weatherNav06Over.png') no-repeat 50% 50%;
+}
+
+
+/* 세로 화면 작을때 */
+@media only screen and (max-height: 770px) {
+  .leftMenu {
+    min-height:auto;
+    height: calc(100vh - 60px);
+  }
+  .leftMenuNav a{
+    padding:13px 0 7px;
+  }
+  .weatherNav{
+    top:30px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  .leftMenu {
+    height: auto;
+  }
+  .copyright {
+    position: relative;
+    top:0;
+    left:0;
+    background-color:#fff;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .weatherNav {
+    position: relative;
+    top: 70px;
+    left: 20px;
+    font-size: 7px;
+    width: 50px;
+  }
+  .weatherNav li {
+    margin-bottom: 15px;
+  }
+  .weatherNav li span {
+    position: relative;
+    top: initial;
+    left: initial;
+    font-size: 1.6em;
+    font-weight: 800;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: none;
+  }
+  .weatherNav li span.dustMenuText{
+    top: initial;
+  }
+  
+}

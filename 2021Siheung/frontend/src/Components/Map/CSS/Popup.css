@@ -1,0 +1,180 @@
+.weathInfoBox {
+  width: 330px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  font-size: 10px;
+  z-index: 99;
+  display: none;
+}
+
+.weathInfoBox .topRed {
+  width: 100%;
+  padding: 0px 2em;
+  background-color: rgba(250, 79, 27, 0.85);
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+}
+.weathInfoBox .topRed .RED {
+  background-color: rgba(250, 79, 27, 0.85);
+}
+
+.weathInfoBox .topRed.BLUE {
+  background-color: rgba(86, 170, 226, 0.85);
+}
+
+.weathInfoBox .topRed.YELLOW {
+  background-color: rgba(255, 156, 12, 0.85);
+}
+
+.weathInfoBox .topRed.WHITE {
+  background-color: rgba(167, 167, 167, 0.9);
+}
+
+.weathInfoBox .topRed.GRAY {
+  background-color: rgba(159, 159, 159, 0.9);
+}
+
+.weathInfoBox .topRed.DEEPBLUE {
+  background-color: rgba(11, 25, 111, 0.8);
+}
+
+.weathInfoBox .topRed.SUBZERO {
+  background-color: rgba(0, 26, 158, 0.8);
+}
+
+.weathInfoBox .topRed.GREEN {
+  background-color: rgba(72, 191, 13, 0.8);
+}
+
+.topRed .tit {
+  padding: 1.5em 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.topRed .tit h2 {
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: 700;
+}
+
+.topRed span {
+  margin-left: auto;
+  font-size: 1.8em;
+  /* cursor: pointer; */
+}
+
+.topRed .info {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.topRed .info > div {
+  width: 50%;
+}
+.topRed .info .fog {
+  text-align: center;
+}
+.topRed .info .fog .fogTit {
+  margin: 0 2rem 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+.topRed .info .fog .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topRed .info .fog .icon svg{
+  overflow: initial;
+}
+
+.topRed .info p {
+  margin: 0.3em 0;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.7em;
+}
+.topRed .info p.text span {
+  font-size: 1.4rem;
+  display: block;
+}
+
+.topRed .info .fog img {
+  margin-right: 1rem;
+}
+
+.topRed .info .fog svg {
+  margin-right: 2rem;
+  width: auto;
+  height: 5rem;
+  fill: #fff;
+}
+.chekingText {
+  font-size: 1.6rem;
+  padding: 1.5rem 1rem;
+}
+
+.weathInfoBox .time {
+  display: flex;
+  border-right: 1px solid #d7d9dc;
+}
+
+.weathInfoBox .time > div {
+  padding: 1.5em 1em;
+  width: 33.3%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 1px solid #d7d9dc;
+  border-bottom: 1px solid #d7d9dc;
+}
+
+.weathInfoBox .time > div > p {
+  margin: 0 0 7px;
+  font-size: 1.4em;
+  color: #888;
+}
+.weathInfoBox .time > div > span {
+  font-size: 1.5rem;
+}
+
+.weathInfoBox .time > div > svg {
+  fill: #404b54;
+  height: 22px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .weathInfoBox {
+    right: 4%;
+    bottom: 20px;
+    width: 250px;
+    font-size: 7px;
+  }
+  .weathInfoBoxFog {
+    bottom: 90px;
+  }
+  .topRed .tit {
+    padding: 1.5em 0em;
+  }
+  .topRed .info .textWrap {
+    width: 60%;
+  }
+  .topRed .info p {
+    margin: 0.8em 0;
+  }
+  .topRed .tit h2 {
+    font-size: 2.3em;
+  }
+  .weathInfoBox .time > div {
+    padding: 1em;
+  }
+  .weathInfoBox .time > div > p {
+    margin: 0 0 3px;
+  }
+}

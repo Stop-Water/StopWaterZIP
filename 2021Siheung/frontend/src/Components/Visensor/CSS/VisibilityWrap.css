@@ -1,0 +1,56 @@
+.visivilityWrap {
+  background-color: white;
+  height: 100vh;
+  width: 85%;
+  background-color: white;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.tableContainer {
+  width: 35%;
+  min-width: 300px;
+  width: 35%;
+}
+.GraphWrap {
+  width: 65%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* ... */
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* ... */
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* ... */
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) {
+  .visivilityWrap {
+    width: 100%;
+    display: block;
+  }
+  .tableContainer {
+    margin: 10px auto;
+    width: 100%;
+    /* min-width:360px; */
+    max-width: 1200px;
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+  .GraphWrap {
+    margin: 50px 0px 0 0;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    overflow: auto;
+  }
+}
