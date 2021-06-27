@@ -1,0 +1,237 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+/*헤더 공통*/
+.headerWrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height:6.5rem;
+    padding: 0 3.5rem;
+    z-index: 100;
+
+    //헤더 좌측 로고+타이틀 부분
+    .headerLogo{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+            .smallLogo{
+                width: 3.5rem;
+            }
+
+            .headerTitle{
+                padding-left: 1.5rem;
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+    }
+
+    //모바일 햄버거 버튼
+    .mobileMenuBtn{
+        display:none;
+        cursor: pointer;
+        padding: 1.3rem 0.45rem;
+
+        .ham{
+            display:block;
+            width: 2.3rem;
+            height: 0.2rem;
+            border-radius:0.2rem;
+            -webkit-border-radius:0.2rem;
+            -moz-border-radius:0.2rem;
+            -ms-border-radius:0.2rem;
+            -o-border-radius:0.2rem;
+            background-color:$icon;
+        }
+
+        .ham1{
+            transform: translate(0,-0.5rem);
+            -webkit-transform: translate(0,-0.5rem);
+            -moz-transform: translate(0,-0.5rem);
+            -ms-transform: translate(0,-0.5rem);
+            -o-transform: translate(0,-0.5rem);
+}
+        .ham3{
+            transform: translate(0,0.5rem);
+            -webkit-transform: translate(0,0.5rem);
+            -moz-transform: translate(0,0.5rem);
+            -ms-transform: translate(0,0.5rem);
+            -o-transform: translate(0,0.5rem);
+}
+
+    }
+
+    //헤더 우측 버튼들
+    .headerRight{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        //라이트-다크 슬라이더
+        .modeSliderWrap{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-right: 3rem;
+
+            .lightIcon{
+                width: 2.2rem;
+            }
+            .darkIcon{
+                width: 1.8rem;
+            }
+
+            .modeSlider{
+                padding: 0 1rem;
+
+                input{
+                    display:none;
+                }
+
+                input:checked + .MSlider .sliderCircle {
+                    left: 1.6rem;
+                }
+
+                .MSlider{
+                    position: relative;
+                    display: block;
+                    width: 2.9rem;
+                    height: 0.9rem;
+                    background: $gray;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 2.5rem;
+                    -webkit-border-radius: 2.5rem;
+                    -moz-border-radius: 2.5rem;
+                    -ms-border-radius: 2.5rem;
+                    -o-border-radius: 2.5rem;
+
+                    .sliderCircle{
+                        position: absolute;
+                        top: -0.2rem;
+                        left: 0;
+                        display: block;
+                        width: 1.3rem;
+                        height: 1.3rem;
+                        background: white;
+                        box-shadow: 0 0 1rem $shadowLight;
+                        border-radius:50%;
+                        -webkit-border-radius:50%;
+                        -moz-border-radius:50%;
+                        -ms-border-radius:50%;
+                        -o-border-radius:50%;
+                        transition: 0.3s;
+                        -webkit-transition: 0.3s;
+                        -moz-transition: 0.3s;
+                        -ms-transition: 0.3s;
+                        -o-transition: 0.3s;    
+                    }
+                }
+            }
+        }
+        .bellBtnWrap{
+            padding-right: 3rem;
+            cursor: pointer;
+
+            .bellIcon{
+                width: 2rem;
+            }
+        }
+        .logoutWrap{
+            cursor: pointer;
+
+            .logoutIcon{
+                width: 2.55rem;
+                fill:$icon;
+            }
+        }   
+    }
+}
+
+
+
+/* 라이트모드 색 지정*/
+body.light{
+    .headerWrap{
+        background-color:$barLight;
+        box-shadow: 0 0 1rem $shadowLight;
+        
+        .headerLogo{
+            color: $textLight;
+        }
+
+        .modeSliderWrap .lightIcon{
+            fill:$yellow;
+        }
+        .modeSliderWrap .darkIcon{
+            fill:$icon;
+        }
+        .bellBtnWrap .bellIcon{
+            fill:$black;
+        }
+    }
+}
+
+/* 다크모드 색 지정*/
+body.dark {
+    .headerWrap{
+        background-color:$barDark;
+        box-shadow: 0 0 1rem $shadowDark;
+    
+        .headerLogo{
+            color: $textDark;
+        }
+
+        .modeSliderWrap .lightIcon{
+            fill:$icon;
+        }
+        .modeSliderWrap .darkIcon{
+            fill:$yellow;
+        }
+        .bellBtnWrap .bellIcon{
+            fill:$white;
+        }
+    }
+}
+
+
+
+/*모바일 미디어쿼리*/
+@include mobile {
+    .headerWrap{
+        padding: 0 2rem;
+
+        .headerLogo{
+            display:none;
+        }
+
+        .mobileMenuBtn{
+        display:block;
+    }
+    }
+
+}

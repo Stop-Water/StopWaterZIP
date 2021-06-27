@@ -1,0 +1,111 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.mapSelectWrap{
+    position:absolute;
+    top: 18rem;
+    left: 14rem;
+    width: 7.5rem;
+    height: 24rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    
+    .selectMenu{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: 100%;
+
+        .selectMenuList{
+            text-align: center;
+            padding: 0.3rem;
+            margin: 0.6rem 0;
+            cursor: pointer;
+
+            .selectIcon{
+                fill: $icon;
+                
+                svg{
+                    height:2.7rem
+                }  
+            }
+
+            .selectName{
+                margin: 0.3rem;
+                fill: $icon;
+            }
+        }
+    }
+}
+
+/*라이트모드 색 지정*/
+body.light{
+    .mapSelectWrap{
+        background-color:$mapBarLight;
+        box-shadow: 0 0 1rem $shadowLight;
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .mapSelectWrap{
+        background-color:$mapBarDark;
+
+    }
+}
+
+
+/*메뉴 클릭 시 addclass*/
+.mapSelectWrap{
+    .selectMenu{
+        .selectMenuList.on{
+            .selectIcon{
+                fill: $skyblue;
+            }
+            .selectName{
+                color: $skyblue;
+            }
+        }
+    }
+}
+
+
+/*모바일 미디어쿼리*/
+@include mobile {
+    .mapSelectWrap{
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8rem;
+        border-radius: 0;
+        -webkit-border-radius:0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        -webkit-border-radius: 0;
+
+        .selectMenu{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        }
+    }
+}

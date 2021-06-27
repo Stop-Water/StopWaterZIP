@@ -1,0 +1,324 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.selectTopWrap{
+    position:absolute;
+    top: 9.5rem;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 10rem);
+    padding: 0 4rem;
+
+    .placeSelectContainer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right: 4rem;
+        padding: 0 2rem;
+        width: calc(70% + 5rem);
+        height: 6rem;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+       
+        .placeName{
+            font-size: $fontLarge;
+            font-weight: 700;
+            margin-right: 3rem;
+        }
+
+        .placeSelect{
+            padding: 0 0.5rem;
+            width: 27rem;
+            height: 3.5rem;
+            font-weight: 500;
+            border: 1px solid $black;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+        }
+    }
+        
+    .dateContainer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 2rem;
+        width: 30%;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+       
+        .weatherBox{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .weatherIconContainer{
+                margin: 0 2rem;
+
+                .weatherIcon{
+                    max-width: 4rem;
+                    height: 3rem;
+                }
+            }
+
+            .temperature{
+                font-size: 3.5rem;
+                font-weight: 500;
+
+                span{
+                    margin-left: 0.5rem;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*라이트모드 색 지정*/
+body.light{
+    //대시보드
+    .dashboardPage{
+        .selectTopWrap{
+            .placeSelectContainer{
+                background-color: $tableTopLight;
+
+                .placeSelect{
+                    background-color: $white;
+                    color: $black;
+                    border: 1px solid $black;
+                }
+            }
+
+            .dateContainer{
+                background-color:$tableTopLight;
+
+                .date{
+                    color:$icon;
+                }
+            }
+        }
+    }
+    //맵
+    .mapPage{
+        .selectTopWrap{
+            .placeSelectContainer{
+                background-color:$mapBarLight;
+                box-shadow: 0 0 1rem $shadowLight;
+
+                .placeSelect{
+                    background-color: $white;
+                    color: $black;
+                    border: 1px solid $black;
+                }
+            }
+            
+            .dateContainer{
+                background-color:$mapBarLight;
+                box-shadow: 0 0 1rem $shadowLight;
+            }
+        }   
+    }
+    //공통
+    .weatherBox{
+        .weatherIconContainer{
+            fill: $black;
+            stroke: $black;
+        }
+
+        .temperature{
+            span{
+                color:$icon;
+            }
+        }
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    //대시보드
+    .dashboardPage{
+        .selectTopWrap{
+            .placeSelectContainer{
+                background-color: $tableTopDark;
+
+                .placeSelect{
+                    background-color: $menuBarDark;
+                    color: $skyblue;
+                    border: 1px solid $skyblue;
+                }
+            }
+
+            .dateContainer{
+                background-color:$tableTopDark;
+                color: $white;
+
+                .date{
+                    color:$icon;
+                }
+            }
+        }
+    }
+    //맵
+    .mapPage{
+        .selectTopWrap{
+            .placeSelectContainer{
+                background-color:$mapBarDark;
+                color:$white;
+
+                .placeSelect{
+                    background-color: $menuBarDark;
+                    color: $skyblue;
+                    border: 1px solid $skyblue;
+                }
+            }
+            
+            .dateContainer{
+                background-color:$mapBarDark;
+                color:$white;
+            }
+        }   
+    }
+    //공통
+    .weatherBox{
+        .weatherIconContainer{
+            fill: $white;
+            stroke: $white;
+        }
+    }
+}
+
+
+
+/*모바일 미디어쿼리*/
+//1024px 이하
+@include tablet{
+    //미디어쿼리 한정 색변화 - 라이트, 다크 - 대시보드, 맵
+    body.light{
+        .dashboardPage{
+            .selectTopWrap{
+                background-color: $tableTopLight;
+            }
+        }
+        .mapPage{
+            .selectTopWrap{
+                background-color:$mapBarLight;
+                box-shadow: 0 0 1rem $shadowLight;
+            }
+        }      
+    }
+    body.dark{
+        .dashboardPage{
+            .selectTopWrap{
+                background-color: $tableTopDark;
+            }
+        }
+        .mapPage{
+            .selectTopWrap{
+                background-color:$mapBarDark;
+            }
+        }
+    }
+
+    //공통
+    .selectTopWrap{
+        top:6.5rem;
+        width: 100%;
+        padding-left: 14rem;
+
+        .placeSelectContainer{
+            -webkit-box-orient: vertical;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            margin-right: 0;
+            padding: 0;
+            height:10rem;
+            background-color:rgba(0,0,0,0) !important;
+            box-shadow: none !important;
+
+            .placeSelect{
+                margin-top: 1.3rem;
+            }
+        }
+        .dateContainer{
+            -webkit-box-orient: vertical;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            padding: 0;
+            height:10rem;
+            background-color:rgba(0,0,0,0) !important;
+            box-shadow: none !important;
+
+            .weatherBox{
+                margin-top: 1.3rem;
+            }
+        }
+    }
+}
+
+//모바일(768px 이하)
+@include mobile{
+    .selectTopWrap{
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding:1rem 2rem;
+
+        .placeSelectContainer{
+            width:auto;
+        }
+
+        .dateContainer{
+            width:auto;
+        }
+    }
+}
+
+@include mobile-s{
+    .selectTopWrap{
+        .dateContainer{
+            .weatherBox{
+                .weatherIconContainer{
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}

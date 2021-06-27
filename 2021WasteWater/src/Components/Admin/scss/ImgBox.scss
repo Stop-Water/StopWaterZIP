@@ -1,0 +1,172 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.imgBoxWrap{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    //스크롤바
+    .imgBoxContainer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 2rem;
+        width: auto !important;
+        height:29.6rem !important;
+
+        .view{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding-top: 2rem;
+        }
+        .track-horizontal{
+            width: 100% !important;
+            height: 0.6rem !important;
+            left: 0;
+            bottom:0.5rem;
+
+            .thumb-horizontal{
+                opacity: 0.3;
+                border-radius: 0.5rem;
+            }
+
+        }
+
+        .imgContainer{
+            margin: 0 1rem;
+            min-width: 25.6rem;
+            height:25.6rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius:0.5rem;
+            -webkit-border-radius:0.5rem;
+            -moz-border-radius:0.5rem;
+            -ms-border-radius:0.5rem;
+            -o-border-radius:0.5rem;
+
+            //체크박스
+            input[type="checkbox"]{
+                display:none;
+            }
+
+            input[type="checkbox"] + label{
+                position: relative;
+                top: 1rem;
+                left: 1rem;
+                display: inline-block;
+                width: 2rem;
+                height:2rem;
+                border-radius:0.5rem;
+                -webkit-border-radius:0.5rem;
+                -moz-border-radius:0.5rem;
+                -ms-border-radius:0.5rem;
+                -o-border-radius:0.5rem;
+            }
+
+            input[type="checkbox"]:checked + label{
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+
+        .imgContainer:first-child{
+            margin-left:0;
+        }
+    }
+}
+
+// //스크롤
+// .imgBoxWrap{
+//     .imgBoxContainer::-webkit-scrollbar {
+//         width: 2rem;
+//         height: 2rem;
+//     }
+//     .imgBoxContainer::-webkit-scrollbar-thumb {
+//         background-clip: padding-box;
+//         border: 0.75rem solid transparent;
+//         border-radius: 2.5rem;
+//         -webkit-border-radius: 2.5rem;
+//         -moz-border-radius: 2.5rem;
+//         -ms-border-radius: 2.5rem;
+//         -o-border-radius: 2.5rem;
+//     }
+//     .imgBoxContainer::-webkit-scrollbar-track {
+//         background-color: transparent;
+//         border-radius: 2.5rem;
+//         -webkit-border-radius: 2.5rem;
+//         -moz-border-radius: 2.5rem;
+//         -ms-border-radius: 2.5rem;
+//         -o-border-radius: 2.5rem;
+//     }
+
+//     .imgBoxContainer::-webkit-scrollbar-corner{
+//         display:none;
+//     }
+// }
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .imgBoxWrap{
+        .imgBoxContainer{
+
+            //스크롤바
+            .track-horizontal{
+                .thumb-horizontal{
+                    background: $purplegray;
+                }
+
+            }
+
+            .imgContainer{
+                background-color: $tableTopLight;
+
+                input[type="checkbox"] + label{
+                    border: 1px solid $purplegray;
+                    background-color: $white;
+                }
+                input[type="checkbox"]:checked + label{
+                    background-image: url('../../../Img/checkLight.svg');
+                }
+            }
+        }
+        .imgBoxContainer::-webkit-scrollbar-thumb {
+            background-color: $purplegray;
+        }
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .imgBoxWrap{
+        .imgBoxContainer{
+
+            //스크롤바
+            .track-horizontal{
+                .thumb-horizontal{
+                    background: $skyblue;
+                }
+
+            }
+
+            .imgContainer{
+                background-color: $tableTopDark;
+
+                input[type="checkbox"] + label{
+                    border: 1px solid $skyblue;
+                    background-color: $menuBarDark;
+                }
+                input[type="checkbox"]:checked + label{
+                    background-image: url('../../../Img/checkDark.svg');
+                }
+            }
+        }
+        .imgBoxContainer::-webkit-scrollbar-thumb {
+            background-color: $skyblue;
+        }
+    }
+}
+

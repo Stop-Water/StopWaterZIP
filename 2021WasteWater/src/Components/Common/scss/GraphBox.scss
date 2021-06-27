@@ -1,0 +1,126 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+
+/*공통 그래프박스*/
+.graphBoxWrap{
+    .graphBoxContainer{
+        position: relative;
+
+        .graphSelect{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+
+            .selectBtn{
+                display: none;
+                width: 13rem;
+                height:3.5rem;
+                font-size:$fontDefault;
+                text-indent: 1rem;
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+            }
+        }
+    }
+
+    //그래프박스 넓이 조절
+    .user-select-none{
+        width: auto !important;
+    }
+}
+
+
+/*페이지별*/
+//대시보드 내부 그래프박스
+.dashboardPage{
+    .graphBox{
+        margin-bottom: 2rem;
+        height: calc(50% - 11.95rem);
+    }
+}
+
+// 통계페이지 내부 그래프박스
+.statisticsPage{
+    .graphBox{
+        margin-top: 1rem;
+        height: 40rem;
+        margin-bottom: 3rem;
+
+        .graphBoxWrap{
+            .graphBoxContainer{
+                .graphSelect{
+                    .selectBtn{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//관리자-데이터관리페이지 내부 그래프박스
+.adminPage{
+    .graphBox{
+        margin-top: 1rem;
+        height: 40rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .graphBoxWrap{
+        .graphBoxContainer{
+            .graphSelect{
+                .selectBtn{
+                    color: $black;
+                    border: 1px solid $black;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*라이트모드 색 지정*/
+body.dark{
+    .graphBoxWrap{
+        .graphBoxContainer{
+            .graphSelect{
+                .selectBtn{
+                    color: $skyblue;
+                    border: 1px solid $skyblue;
+                    background-color: $menuBarDark;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*미디어쿼리*/
+@include web-s{
+    //대시보드 내부 그래프박스
+    .dashboardPage{
+        .graphBox{
+            height: calc(50% - 9.95rem);
+        }
+    }
+}
+
+@include tablet{
+    //대시보드 내부 그래프박스
+    .dashboardPage{
+        .graphBox{
+            height: 30rem;
+        }
+    }
+}

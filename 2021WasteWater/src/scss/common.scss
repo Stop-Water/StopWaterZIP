@@ -1,0 +1,86 @@
+@import "color";
+@import "fonts";
+@import "mixin";
+
+
+//전체 폰트크기 기본
+body{
+    font-size:$fontDefault;
+}
+
+//전체 소타이틀
+.smallTitle{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size:$fontMedium;
+    font-weight: 500;
+
+    .excelIcon{
+        width: 2.2rem;
+        height: 2.1rem;
+        cursor: pointer;
+    }
+
+    .modifyIcon, .saveIcon, .deleteIcon, .uploadIcon{
+        width: 1.9rem;
+        max-height: 2.2rem;
+        cursor: pointer;
+    }
+
+    .rigthIcon span:first-child{
+        position: relative;
+        right: 1.5rem;
+    }
+}
+
+
+//라이트, 다크모드 공통 변화
+body.light{
+    color:$textLight;
+    background-color:$backgroundLight;
+    background-image: url('../Img/backgroundLight.png');
+
+    .excelIcon, .modifyIcon, .saveIcon, .deleteIcon, .uploadIcon{
+        fill: $purplegray;
+    }
+    select{
+        background: url(../Img/arrowLight.svg);
+        background-repeat: no-repeat; 
+        background-position: calc(100% - 0.5rem) 51%;
+    }
+}
+
+body.dark{
+    color:$textDark;
+    background-color:$backgroundDark;
+    background-image: url('../Img/backgroundDark.png'), url('../Img/backgroundDark2.svg');
+    background-size: auto, cover;
+    background-position:center center;
+    background-repeat:repeat, no-repeat;
+
+    .excelIcon, .modifyIcon, .saveIcon, .deleteIcon, .uploadIcon{
+        fill: $skyblue;
+    }
+    select{ 
+        background: url(../Img/arrowDark.svg);
+        background-repeat: no-repeat; 
+        background-position: calc(100% - 0.5rem) 51%;
+    }
+}
+
+
+//포커스 삭제
+a:focus{
+    text-decoration:none;
+}
+
+input:focus, button:focus, textarea:focus, select:focus{
+    outline: none;
+}

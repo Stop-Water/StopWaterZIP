@@ -1,0 +1,410 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+
+/*페이지별*/
+// 대시보드 내부 테이블박스
+.dashboardPage{
+    .tableBox{
+        height: calc(50% - 11.95rem);
+    }
+}
+
+// 통계페이지, 관리자-데이터관리 페이지 내부 테이블 박스
+.statisticsPage,.adminPage{
+    .tableBox{
+        margin-top: 1rem;
+        height: 40rem;
+        margin-bottom: 3rem;
+        .tableBox1Wrap{
+            .dataWrap{
+                .dataTable{
+                    .tableTop .tableRow, .tableContents .tableRow{
+                        padding: 0 4rem;
+                        padding-right: 4rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//관리자-사용자관리 페이지
+.adminPage{
+    .admin3Wrap{
+        .tableBox1Wrap{
+            .dataTable{
+                .tableRow{
+                    .tableCell.checkBox{
+                        display:block;
+                    }
+                }
+            }
+        }   
+    }
+}
+
+//관리자 팝업
+.modalPage{
+    .sensorWrap{
+        .tableBox{
+            .tableBox1Wrap{
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+                height:30rem;
+                .dataWrap{
+                    .dataTable{
+                        .tableTop{
+                            background-image: none;
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
+
+
+
+/*가로형 테이블 공통*/
+.tableBox1Wrap{
+    .dataWrap{
+        position: absolute !important;
+        top: 0.15rem;
+        left: 0.15rem;
+        margin: 1rem;
+        width:calc(100% - 2rem) !important;;
+        height:calc(100% - 2rem) !important;;
+        font-size: 1.5rem;
+        
+        //스크롤바
+
+        .track-vertical{
+            top: 0;
+            bottom: 0;
+            width: 0.6rem !important;
+            right: 0;
+            z-index: 10;
+
+            .thumb-vertical{
+                opacity: 0.3;
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+            }
+        }
+        .track-horizontal{
+            right: 0;
+            left: 0;
+            height: 0.6rem !important;
+            bottom:0;
+
+            .thumb-horizontal{
+                opacity: 0.3;
+                border-radius: 0.5rem;
+            }
+
+        }
+        
+        .dataTable.dataTop{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .dataTable{
+            width: 100%;
+            white-space: nowrap;
+            
+            //테이블 헤더
+            .tableTop{
+                display:table;
+                margin-bottom: 0.5rem;
+                width: 100%;
+                background-position: left top;
+                border-radius: 0.5rem;
+                -webkit-border-radius: 0.5rem;
+                -moz-border-radius: 0.5rem;
+                -ms-border-radius: 0.5rem;
+                -o-border-radius: 0.5rem;
+            }
+
+            //react-virtualized class
+            .ReactVirtualized__Grid{
+                width: 100% !important;
+                overflow: visible !important;
+
+                .ReactVirtualized__Grid__innerScrollContainer{
+                    max-width:100% !important;
+                    overflow: visible !important;
+                }
+            }
+
+            //테이블 바디
+            .tableContents{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                will-change: transform;
+                height: calc(100% - 3rem);
+            }
+
+            //테이블 공통
+            .tableRow{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                width: 100% !important;
+                height: 3.5rem;
+                line-height: 3.5rem;
+                overflow: visible !important;
+                border-radius: 0.5rem;
+                    -webkit-border-radius: 0.5rem;
+                    -moz-border-radius: 0.5rem;
+                    -ms-border-radius: 0.5rem;
+                    -o-border-radius: 0.5rem;
+
+                .tableCell{
+                    flex: 1 !important;
+                    padding: 0 1rem;
+                    text-align: center;
+                    width: 100%;
+                    min-width: 12.6rem;
+                    flex: auto !important;
+                }
+
+                .tableCell.checkBox{
+                    display: none;
+                    min-width: 3rem;
+
+                    input[type="checkbox"]{
+                        display:none;
+                    }
+
+                    input[type="checkbox"] + label{
+                        display: inline-block;
+                        width: 1.6rem;
+                        height:1.6rem;
+                        border-radius:0.5rem;
+                        -webkit-border-radius:0.5rem;
+                        -moz-border-radius:0.5rem;
+                        -ms-border-radius:0.5rem;
+                        -o-border-radius:0.5rem;
+                    }
+
+                    input[type="checkbox"]:checked + label{
+                        background-position: center center;
+                        background-size: cover;
+                    }
+                }
+                
+                // 시간표현이 짧아져서 우선 빼두었습니다.
+                // .tableCell.long{
+                // min-width: 15rem;
+                // }
+            }
+            
+            .tableRow:nth-child(2n-1){
+                color: $tableColor1;
+            }
+            .tableRow:nth-child(2n){
+                color: $tableColor2;
+            }
+
+        }
+    }
+}
+
+
+// //스크롤바 >> 플러그인으로 변경
+// .tableBox1Wrap{
+//     .dataWrap::-webkit-scrollbar {
+//         width: 2rem;
+//         height: 2rem;
+//         -webkit-appearance: none;
+//     }
+//     .dataWrap::-webkit-scrollbar-thumb {
+//         background-clip: padding-box;
+//         border: 0.75rem solid transparent;
+//         border-radius: 2.5rem;
+//         -webkit-border-radius: 2.5rem;
+//         -moz-border-radius: 2.5rem;
+//         -ms-border-radius: 2.5rem;
+//         -o-border-radius: 2.5rem;
+//     }
+//     .dataWrap::-webkit-scrollbar-track {
+//         background-color: transparent;
+//         border-radius: 2.5rem;
+//         -webkit-border-radius: 2.5rem;
+//         -moz-border-radius: 2.5rem;
+//         -ms-border-radius: 2.5rem;
+//         -o-border-radius: 2.5rem;
+//     }
+
+//     .dataWrap::-webkit-scrollbar-corner{
+//         display:none;
+//     }
+
+//     //ie 스크롤바
+//     .dataWrap{
+//         scrollbar-3dlight-color: $skyblue;
+//         scrollbar-arrow-color: $skyblue;
+//         scrollbar-face-color: $skyblue;
+//         scrollbar-track-color: $backgroundDark;
+//     }
+// }
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .tableBox1Wrap{
+        .dataWrap{
+
+            //스크롤바
+            .track-vertical{
+                .thumb-vertical{
+                    background: $purplegray;
+                }
+            }
+            .track-horizontal{
+                .thumb-horizontal{
+                    background: $purplegray;
+                }
+
+            }
+
+            .dataTable{
+                .tableTop{
+                    background-color:$backgroundLight;
+                    background-image: url('../../../Img/backgroundLight.png');
+
+                    .tableRow{
+                        color:$black;
+                        background-color:$tableTopLight;
+
+                    }
+                }
+                
+                .tableContents{
+                    .tableRow:hover{
+                        background-color: $tableHoverLight;
+                    }
+                }
+
+                .tableCell.checkBox{
+                    input[type="checkbox"] + label{
+                        border: 1px solid $purplegray;
+                        background-color: $white;
+                    }
+                    input[type="checkbox"]:checked + label{
+                        background-image: url('../../../Img/checkLight.svg');
+                    }
+                }
+            }
+        }
+        .dataWrap::-webkit-scrollbar-thumb {
+            background-color: $purplegray;
+        }
+    }  
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .tableBox1Wrap{
+        .dataWrap{
+
+            //스크롤바
+            .track-vertical{
+                .thumb-vertical{
+                    background: $skyblue;
+                }
+            }
+            .track-horizontal{
+                .thumb-horizontal{
+                    background: $skyblue;
+                }
+
+            }
+
+            .dataTable{
+                .tableTop{
+                    background-color:$backgroundDark;
+                    background-image: url('../../../Img/backgroundDark.png');
+
+                    .tableRow{
+                        color: $lightblue;
+                        background-color:$tableTopDark;
+                    }
+                }
+
+                .tableContents{
+                    .tableRow:hover{
+                        background-color: $tableHoverDark;
+                    }
+                }
+
+                .tableCell.checkBox{
+                    input[type="checkbox"] + label{
+                        border: 1px solid $skyblue;
+                        background-color: $backgroundDark;
+                    }
+                    input[type="checkbox"]:checked + label{
+                        background-image: url('../../../Img/checkDark.svg');
+                    }
+                }
+            }
+        }
+        .dataWrap::-webkit-scrollbar-thumb {
+            background-color: $skyblue;
+        }
+    }
+}
+
+
+/*미디어쿼리*/
+@include web-s{
+    // 대시보드 내부 테이블박스
+    .dashboardPage{
+        .tableBox{
+            height: calc(50% - 9.95rem);
+        }
+
+    }
+}
+
+@include tablet{
+    // 대시보드 내부 테이블박스
+    .dashboardPage{
+        .tableBox{
+            height: 30rem;
+        }
+
+    }
+    
+    // 통계페이지, 관리자-데이터관리 페이지 내부 테이블박스
+    .statisticsPage, .adminPage{
+        .tableBox{
+            .tableBox1Wrap{
+                .dataWrap{
+                    .dataTable{
+                        .tableTop .tableRow, .tableContents .tableRow{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

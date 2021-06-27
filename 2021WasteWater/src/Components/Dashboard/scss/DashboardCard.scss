@@ -1,0 +1,222 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+/*대시보드 카드 공통*/
+.dashboard{
+    .dashboardCardContainer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        font-size: $fontMedium;
+
+        .dashboardCardWrap{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding: 0 3%;
+            height: 8rem;
+            border-radius: 0.5rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+
+            .cardTitle{
+                margin-right: 1rem;
+                word-break: keep-all;
+                color: $icon;
+            }
+        
+            .cardNumBox{
+                font-family: 'Montserrat';
+                font-size: $fontDefault; 
+                font-weight: 400;
+                color: $icon;
+
+                .cardNum{
+                    margin-right: 0.3rem;
+                    font-size: 3.5rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+/*dashboard1(유량)*/
+.dashboard1{
+    .dashboardCardContainer{
+        .dashboardCardWrap{
+            width: calc(100%/3 - 0.9rem);
+        }
+        .dashboardCardWrap:first-child{
+            width: calc(100%/3*2 - 0.45rem);
+        }
+    }
+}
+
+/*dashboard2(유량)*/
+.dashboard2{
+    .dashboardCardContainer{
+        .dashboardCardWrap{
+            width: calc(100%/2 - 0.6rem);
+        }
+    }
+}
+
+/*dashboard3(유량)*/
+.dashboard3{
+    .dashboardCardContainer{
+        .dashboardCardWrap{
+            padding: 0 29%;
+            width: 100%;
+            height: 17.2rem;
+        }
+    }
+}
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .dashboard{
+        .dashboardCardContainer{
+            .dashboardCardWrap{
+                background-color:$white;
+                box-shadow: 0 2rem 6rem rgba(0,0,0,0.07);
+
+                .cardNumBox{
+                    .cardNum{
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .dashboard{
+        .dashboardCardContainer{
+            .dashboardCardWrap{
+                background-color:$black;
+                
+                .cardNumBox{
+                    .cardNum{
+                        color: $white;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+/*미디어쿼리*/
+@include admin2{
+    .dashboard{
+        .dashboardCardContainer{
+            .dashboardCardWrap{              
+                .cardNumBox{
+                    .cardNum{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@include web-s{
+    .dashboard{
+        .dashboardCardContainer{
+            font-size:1.1rem;
+            .dashboardCardWrap{
+                height: 6rem;
+                
+                .cardTitle{
+                    width: 3rem;
+                }
+                .cardNumBox{
+                    font-size: $fontXsmall;
+                    .cardNum{
+                        margin-right: 0;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard3{
+    .dashboardCardContainer{
+        .dashboardCardWrap{
+            height: 13.2rem;
+        }
+    }
+}
+}
+@include tablet{
+    .dashboard{
+        .dashboardCardContainer{
+            .dashboardCardWrap{
+                .cardTitle{
+                    width: 3rem;
+                }
+
+                .cardNumBox{
+                    .cardNum{
+                        font-size: 3.0rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+@include mobile{
+    .dashboard{
+        .dashboardCardContainer{
+            font-size:$fontDefault;
+
+            .dashboardCardWrap{
+                .cardTitle{
+                    width: 3rem;
+                }
+
+                .cardNumBox{
+                    .cardNum{
+                        font-size: 2.5rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+/*위험수치*/
+.dashboard{
+    .dashboardCardContainer{
+        .dashboardCardWrap{
+            .cardNumBox{
+                .cardNum.warning{
+                    color:$red !important;
+                }
+            }
+        }
+    }
+}

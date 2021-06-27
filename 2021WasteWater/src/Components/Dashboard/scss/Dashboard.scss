@@ -1,0 +1,39 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+
+/*대시보드 너비조절*/
+.dashboard1{
+    width: 40%;
+}
+
+.dashboard2, .dashboard3{
+    width: 30%;
+}
+
+.dashboard{
+    height: calc(100% - 3.5rem);
+    margin-right: 4rem;
+
+    .dashboardCardContainer{
+        margin-bottom: 0.8rem;
+    }
+}
+
+.dashboard:last-child{
+    margin-right: 0;
+}
+
+/*미디어쿼리*/
+@include tablet{
+    .dashboard{
+        margin-bottom: 2rem;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+    .dashboard:last-child{
+        margin-bottom: 3.5rem;
+    }
+}

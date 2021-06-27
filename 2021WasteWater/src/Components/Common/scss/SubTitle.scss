@@ -1,0 +1,52 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.subTitleWrap{
+    width: 100%;
+
+    .titleRow{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        
+
+        .subTitle{
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        .smallNav a, .smallNav span{
+            font-size: $fontSmall;
+            font-weight: 300;
+            color:$tableColor1;
+        }
+
+        .smallNav span{
+            padding-left: 1rem;
+        }
+    }
+}
+
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .titleRow{
+        border-bottom: 1px solid rgba(205, 206, 207, 0.7);
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .titleRow{
+        border-bottom: 1px solid rgba(55, 111, 161, 0.4);
+    }
+}

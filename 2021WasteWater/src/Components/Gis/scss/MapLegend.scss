@@ -1,0 +1,219 @@
+@import '../../../scss/color';
+@import '../../../scss/fonts';
+@import '../../../scss/mixin';
+
+.mapLegendWrap {
+  position: absolute;
+  right: 4rem;
+  top: 18rem;
+  z-index: 10;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  
+  .selectBox{
+    .legendBtn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 11rem;
+      height: 3rem;
+      background-color: $black;
+      color: $white;
+      fill: $white;
+      cursor: pointer;
+      border-radius: 0.3rem;
+      -webkit-border-radius: 0.3rem;
+      -moz-border-radius: 0.3rem;
+      -ms-border-radius: 0.3rem;
+      -o-border-radius: 0.3rem;
+      
+    .infoIcon{
+        margin-right: 0.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .legendMenuContainer {
+    position: absolute;
+    width: 11rem;
+    z-index: 10;
+
+    .legendMenu {
+      padding: 1.2rem 0.8rem;
+      display: none;
+      background-color: $lightgray;
+      border-radius: 0 0 0.3rem 0.3rem;
+      -webkit-border-radius: 0 0 0.3rem 0.3rem;
+      -moz-border-radius: 0 0 0.3rem 0.3rem;
+      -ms-border-radius: 0 0 0.3rem 0.3rem;
+      -o-border-radius: 0 0 0.3rem 0.3rem;
+
+  .legendList{
+        margin-bottom: 0.4rem;
+        width: 100%;
+        height: 3rem;
+        background-color: $white;
+        color: $gray;
+        box-shadow: 0 0 0.5rem $shadowLight;
+        text-align: center;
+        line-height: 3rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+        
+    span{
+          font-size: $fontSmall;
+        }
+      }
+
+      .legendList:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .legendContainer {
+    position: absolute;
+    top: 4.2rem;
+    right: 12.5rem;
+    display: none;
+    width: 18.5rem;
+
+    .legendTable {
+      background-color: $white;
+      padding: 1.5rem;
+      border-radius: 0.5px;
+      -webkit-border-radius: 0.5px;
+      -moz-border-radius: 0.5px;
+      -ms-border-radius: 0.5px;
+      -o-border-radius: 0.5px;
+
+    .tableRow{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 1.2rem;
+        color: $gray;
+
+        .tableLeft {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+
+          .legendIcon {
+            margin-right: 0.8rem;
+            width: 1.6rem;
+            height: 1.6rem;
+          }
+        }
+      }
+
+      .tableRow:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+/*라이트모드 색 지정*/
+body.light{
+  .mapLegendWrap{
+    box-shadow: 0 0 1rem $shadowLight;
+
+    .legendContainer {
+      .legendTable{
+        box-shadow: 0 0 0.5rem $shadowLight;
+      }
+    }
+  }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+  .mapLegendWrap{
+    box-shadow: 0 0 1rem $shadowDark;
+
+    .legendContainer {
+      .legendTable{
+        box-shadow: 0 0 0.5rem $shadowDark;
+      }
+    }
+  }
+}
+
+
+/*메뉴 클릭 시 addclass*/
+.mapLegendWrap {
+  .selectBox {
+    .legendBtn.on {
+      border-radius: 0.3rem 0.3rem 0 0;
+      -webkit-border-radius: 0.3rem 0.3rem 0 0;
+      -moz-border-radius: 0.3rem 0.3rem 0 0;
+      -ms-border-radius: 0.3rem 0.3rem 0 0;
+      -o-border-radius: 0.3rem 0.3rem 0 0;
+    }
+
+    .legendMenuContainer.on {
+      .legendMenu.on {
+        display: block;
+
+        .legendList.on {
+          background-color: $black;
+          color: $white;
+        }
+
+        .legendList.on::before {
+          content: ' ';
+          position: absolute;
+          margin-top: 0.7rem;
+          margin-left: -3.4rem;
+          display: block;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: $white;
+          cursor: auto;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .legendContainer.on {
+    display: block;
+  }
+}
+
+/*모바일 미디어쿼리*/
+@include mobile {
+  .mapLegendWrap {
+    top:20rem;
+    right: 2rem;
+  }
+}

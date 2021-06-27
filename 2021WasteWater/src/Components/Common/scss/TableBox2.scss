@@ -1,0 +1,267 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+
+/*세로형 테이블 전체*/
+.tableBox2Wrap{
+    .dataWrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        .tableColgroup{
+            width: calc(50% - 1.3rem);
+            
+            .tableRow{
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin: 1rem 2rem;
+                width: 100%;
+                overflow: hidden;
+
+                .tableCell{
+                    height: 3.5rem;
+                    line-height: 3.5rem;
+
+                    input{
+                        background: rgba(0,0,0,0);
+                        border: none;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .tableCell:first-child{
+                    margin-right: 2rem;
+                    width: 13rem;
+                    min-width: 10rem;
+                    text-align: center;
+                    border-radius: 0.5rem;
+                    -webkit-border-radius: 0.5rem;
+                    -moz-border-radius: 0.5rem;
+                    -ms-border-radius: 0.5rem;
+                    -o-border-radius: 0.5rem;
+                }
+
+                .modifyBtn{
+                    position: absolute;
+                    display: none;
+                    top: 0;
+                    right: 1rem;
+                    width: 8.5rem;
+                    height:3.2rem;
+                    font-weight: 400;
+                    font-size: $fontDefault;
+                    color:$black;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                    -webkit-border-radius: 0.5rem;
+                    -moz-border-radius: 0.5rem;
+                    -ms-border-radius: 0.5rem;
+                    -o-border-radius: 0.5rem;
+                }
+            }
+            
+            .tableRow:first-child{
+                margin-top:2rem;
+            }
+            .tableRow:last-child{
+                margin-bottom:2rem;
+            }
+        }
+    }
+}
+
+
+
+/*페이지별*/
+//관리자페이지
+.adminPage{
+    .tableBox2{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+
+        .dataWrap{
+            .tableColgroup{
+                .tableRow{
+                    .modifyBtn.on{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//관리자-사용자관리 페이지
+.adminPage{
+    .admin3Wrap{
+        .dataWrap{
+            .tableColgroup{
+                width: calc(100% - 3rem);
+            }
+            
+            .tableColgroup:last-child{
+                display: none;
+            }
+        }
+    }
+}
+
+//관리자 팝업
+.modalPage{
+    .sensorWrap{
+        .tableBox2{
+            .tableBox2Wrap{
+                margin-top: 1rem;
+                margin-bottom: 4rem;
+            }    
+        }
+    }
+}
+
+
+
+/*라이트모드 색 지정*/
+body.light{
+    .tableBox2Wrap{
+        .dataWrap{
+            .tableRow{
+                .tableCell{
+                    color:$black;
+                }
+                .tableCell:first-child{
+                    background-color:$tableTopLight;
+                }
+                .modifyBtn{
+                    background-color:$white;
+                    color: $black;
+                    border: 1px solid $purplegray;
+                }
+            }
+        }
+    }  
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .tableBox2Wrap{
+        .dataWrap{
+            .tableRow{
+                .tableCell{
+                    color:$skyblue;
+                }
+                .tableCell:first-child{
+                    color: $lightblue;
+                    background-color:$tableTopDark;
+                }
+                .modifyBtn{
+                    background-color:$menuBarDark;
+                    color: $skyblue;
+                    border: 1px solid $skyblue;
+                }
+            }
+        }
+    }  
+}
+
+
+
+/*미디어쿼리*/
+@include web-s{
+    .tableBox2Wrap{
+        .dataWrap{
+            display: block;
+
+            .tableColgroup{
+                width: calc(100% - 3rem);
+
+                .tableRow:first-child{
+                    margin-top:0;
+                }
+                .tableRow:last-child{
+                    margin-bottom:0;
+                }
+            }
+
+            .tableColgroup:first-child{
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            .tableColgroup:last-child{
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@include tablet{
+    .tableBox2Wrap{
+        .dataWrap{
+            display: block;
+
+            .tableColgroup{
+                width: calc(100% - 3rem);
+
+                .tableRow:first-child{
+                    margin-top:0;
+                }
+                .tableRow:last-child{
+                    margin-bottom:0;
+                }
+            }
+
+            .tableColgroup:first-child{
+                padding-top: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            .tableColgroup:last-child{
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .tableBox2Wrap{
+        .dataWrap{
+            .tableColgroup{
+                .tableRow{
+                    .tableCell:first-child{
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+    .modalPage{
+        .sensorWrap{
+            .tableBox2{
+                .tableBox2Wrap{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include mobile-s{
+    .tableBox2Wrap{
+        .dataWrap{
+            .tableColgroup{
+                .tableRow{
+                    .modifyBtn{
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

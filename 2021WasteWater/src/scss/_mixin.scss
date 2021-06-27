@@ -1,0 +1,30 @@
+@mixin admin2{ //1400~1650px, 웹 사이즈
+    @media (max-width: 1650px) and (min-width:1399px){
+        @content;
+    }
+}
+
+@mixin web-s{ //1024~1399px 이하, 웹 작은 사이즈
+    @media (max-width: 1399px) and (min-width:1024px){
+        @content;
+    }
+}
+
+@mixin tablet{ //1023px 이하, 태블릿
+    @media (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin mobile { //767px 이하, 모바일
+    @media (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin mobile-s { //320px 이하, 작은 모바일
+    @media (max-width: 320px){
+        @content;
+    }
+}
+

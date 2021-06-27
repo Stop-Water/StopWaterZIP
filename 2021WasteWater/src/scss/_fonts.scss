@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Noto Sans Kr';
+    font-style: normal;
+    font-weight: 300;
+    src:
+      local('Noto Sans Light'),
+      local('NotoSans-Light'),
+      url('../fonts/NotoSans-Light.woff') format('woff'),
+      url('../fonts/NotoSans-Light.woff2') format('woff2'),
+    	url('../fonts/NotoSans-Light.eot'),
+      url('../fonts/NotoSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Kr';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('Noto Sans Regular'),
+      local('NotoSans-Regular'),
+      url('../fonts/NotoSans-Regular.woff') format('woff'),
+      url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+    	url('../fonts/NotoSans-Regular.eot'),
+      url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Kr';
+    font-style: normal;
+    font-weight: 500;
+    src:
+      local('Noto Sans Medium'),
+      local('NotoSans-Medium'),
+      url('../fonts/NotoSans-Medium.woff2') format('woff2'),
+      url('../fonts/NotoSans-Medium.woff') format('woff'),
+    	url('../fonts/NotoSans-Medium.eot'),
+      url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Kr';
+    font-style: normal;
+    font-weight: 700;
+    src:
+      local('Noto Sans Bold'),
+      local('NotoSans-Bold'),
+      url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+      url('../fonts/NotoSans-Bold.woff') format('woff'),
+    	url('../fonts/NotoSans-Bold.eot'),
+      url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Kr';
+    font-style: normal;
+    font-weight: 900;
+    src:
+      local('Noto Sans lackd'),
+      local('NotoSans-Black'),
+      url('../fonts/NotoSans-Black.woff2') format('woff2'),
+      url('../fonts/NotoSans-Black.woff') format('woff'),
+    	url('../fonts/NotoSans-Black.eot'),
+      url('../fonts/NotoSans-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Black.otf') format('opentype');
+}
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      local('Montserrat Regular'),
+      local('Montserrat-Regular'), 
+      url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'),
+      url('../fonts/montserrat-v15-latin-regular.woff') format('woff'),
+    	url('../fonts/montserrat-v15-latin-regular.eot'),
+      url('../fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/montserrat-v15-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src:
+      local('Montserrat Semibold'),
+      local('Montserrat-Semibold'),
+      url('../fonts/montserrat-v15-latin-600.woff2') format('woff2'),
+      url('../fonts/montserrat-v15-latin-600.woff') format('woff'),
+    	url('../fonts/montserrat-v15-latin-600.eot'),
+      url('../fonts/montserrat-v15-latin-600.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/montserrat-v15-latin-600.ttf') format('truetype');
+}
+
+
+/*15px default 기준 22, 17, 13, 9*/
+$fontLarge: 2.2rem;
+$fontMedium: 1.7rem;
+$fontDefault: 1.5rem;
+$fontSmall: 1.3rem;
+$fontXsmall: 0.9rem;

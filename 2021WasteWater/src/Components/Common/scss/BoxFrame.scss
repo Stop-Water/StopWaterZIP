@@ -1,0 +1,50 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.boxFrame{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-position: top left, top right, bottom left, bottom right;
+    background-repeat:no-repeat; 
+
+    .frameLine{
+        position: absolute;
+        top: 0.15rem;
+        left: 0.15rem;
+        width:calc(100% - 0.3rem);
+        height:calc(100% - 0.3rem);
+        z-index: -1;
+    }
+}
+
+/*라이트모드 색 지정*/
+body.light{
+    .boxFrame{
+        background-image: 
+            url(../../../Img/frameLight1.svg), 
+            url(../../../Img/frameLight2.svg), 
+            url(../../../Img/frameLight3.svg), 
+            url(../../../Img/frameLight4.svg);
+
+        .frameLine{
+            border: 1px solid $boxFrameLight;
+        }
+    }
+}
+
+/*다크모드 색 지정*/
+body.dark{
+    .boxFrame{
+        background-image: 
+            url(../../../Img/frameDark1.svg), 
+            url(../../../Img/frameDark2.svg), 
+            url(../../../Img/frameDark3.svg), 
+            url(../../../Img/frameDark4.svg);
+
+        .frameLine{
+            border: 1px solid $boxFrameDark;
+        }
+    }
+}

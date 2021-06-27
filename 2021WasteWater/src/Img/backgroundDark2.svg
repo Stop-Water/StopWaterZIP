@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1923" height="1080" viewBox="0 0 1923 1080">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.543" gradientTransform="matrix(0.504, 0.864, -0.537, 0.313, 0.517, -0.089)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#192730"/>
+      <stop offset="1" stop-color="#0a0d10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect id="사각형_980" data-name="사각형 980" width="1923" height="1080" fill="url(#radial-gradient)"/>
+</svg>

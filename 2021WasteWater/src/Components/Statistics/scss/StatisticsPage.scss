@@ -1,0 +1,24 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+/*기본 통계 페이지 고정*/
+    .statisticsPage{
+        position: relative;
+        top: 0;
+        left: 10rem;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+        padding: 0 4rem;
+        width: calc(100% - 10rem);
+    }
+
+
+/*미디어쿼리*/
+@include mobile{
+    .statisticsPage{
+        left: 0;
+        padding: 0 2rem;
+        width: 100%;
+    }
+}

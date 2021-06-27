@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* @ RESET CSS  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  font-family: 'Noto Sans Kr', sans-serif;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-size: 10px;
+  touch-action: pan-y; /*사파리 터치*/
+}
+body {
+  height: 100%;
+  line-height: 1;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+img {
+  border: 0 none;
+  font-size: 0;
+  line-height: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  vertical-align: middle; /* white-space: nowrap */
+}
+a:hover {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+div,
+span,
+label,
+a {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  line-height: 1;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+a:visited {
+  color: #333;
+}
+*,
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+select,
+textarea,
+button,
+input {
+  font-family: 'Noto Sans Kr', sans-serif;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+/* 사파리, 익스 등 기본속성 삭제 */
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input,
+textarea,
+button,
+select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/*미디어쿼리*/
+@media (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 6px;
+  }
+}

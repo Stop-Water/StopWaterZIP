@@ -1,0 +1,125 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+.errorWrap{
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+
+    .errorContainer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+
+        .errorIcon{
+            margin-right: 9.5rem;
+
+            svg{
+                width: 18.4rem;
+                height:17.2rem;
+            }
+        }
+
+        .errorTextBox{
+            .errorTitle{
+                font-weight: 700;
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .errorText{
+                line-height: 3rem;
+                font-size: $fontMedium;
+                color: $icon;
+                margin-bottom: 5rem;
+            }
+            
+            .errorBtn{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 25rem;
+                height: 5.5rem;
+                color: $white;
+                background-color:$skyblue;
+                font-weight: 700;
+                font-size: $fontMedium;
+                border-radius: 2.8rem;
+                -webkit-border-radius: 2.8rem;
+                -moz-border-radius: 2.8rem;
+                -ms-border-radius: 2.8rem;
+                -o-border-radius: 2.8rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/*라이트모드*/
+body.light{
+    .errorWrap{
+        background:$backgroundLight;
+        
+        .errorTextBox{
+            .errorTitle{
+                color: $black;
+            }
+        }
+    }
+}
+
+/*다크모드*/
+body.dark{
+    .errorWrap{
+        background:$black;
+
+        .errorTextBox{
+            .errorTitle{
+                color: $white;
+            }
+        }
+    }
+}
+
+
+@include tablet{
+    .errorWrap{
+        .errorContainer{
+            -webkit-box-orient: vertical;
+            -ms-flex-direction: column;
+            flex-direction: column;
+
+            .errorIcon{
+                margin-right: 0;
+                margin-bottom: 5rem;
+
+                svg{
+                    width: 100%;
+                }
+            }
+
+            .errorTextBox{
+                .errorBtn{
+                    width: 100%;
+                }
+            }
+        }   
+    }
+}

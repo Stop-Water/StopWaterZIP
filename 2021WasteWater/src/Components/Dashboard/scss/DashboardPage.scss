@@ -1,0 +1,47 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+/*기본 대시보드 페이지 고정*/
+.dashboardPage{
+    height: 100vh;
+
+    .dashboardWrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        top: 17rem;
+        left: 10rem;
+        padding: 0 4rem;
+        width: calc(100% - 10rem);
+        height: calc(100% - 17rem);
+    }
+}
+
+
+/*미디어쿼리*/
+@include tablet{
+    .dashboardPage{
+        height: auto;
+        //높이 100vh > auto로 변하면서 마진붕괴현상이 더이상 영향 안미치므로 마진으로 변경
+
+        .dashboardWrap{
+            top: 0;
+            margin-top: 18.5rem;
+            display: block;
+            height: auto;
+        }
+    }
+}
+
+@include mobile{
+    .dashboardPage{
+        .dashboardWrap{
+            left: 0;
+            margin-top: 20.5rem;
+            padding: 0 2rem;
+            width: 100%;
+        }
+    }
+}

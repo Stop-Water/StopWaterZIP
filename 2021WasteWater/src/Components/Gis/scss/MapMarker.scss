@@ -1,0 +1,196 @@
+@import '../../../scss/color';
+@import '../../../scss/fonts';
+@import '../../../scss/mixin';
+
+/*맵마커 전체*/
+.mapMarkerWrap {
+  position: absolute;
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 11.5rem); // 위치는 임의로 잡아두었습니다.
+  width: 24rem;
+
+  //맵마커
+  .markerContainer {
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+
+    .markerTitle {
+      height: 4rem;
+      line-height: 4rem;
+      text-align: center;
+      background-color: $skyblue;
+      color: $white;
+      border-radius: 0.5rem 0.5rem 0 0;
+      -webkit-border-radius: 0.5rem 0.5rem 0 0;
+      -moz-border-radius: 0.5rem 0.5rem 0 0;
+      -ms-border-radius: 0.5rem 0.5rem 0 0;
+      -o-border-radius: 0.5rem 0.5rem 0 0;
+    }
+    
+    .markerContents {
+      background-color: $white;
+      border-radius: 0 0 0.5rem 0.5rem;
+      -webkit-border-radius: 0 0 0.5rem 0.5rem;
+      -moz-border-radius: 0 0 0.5rem 0.5rem;
+      -ms-border-radius: 0 0 0.5rem 0.5rem;
+      -o-border-radius: 0 0 0.5rem 0.5rem;
+      
+      .markerTable{
+        display: none;
+        padding: 1.5rem 3rem;
+
+        .tableRow {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 1rem;
+          color: $darkblue;
+
+          .tableLeft {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .markerIcon {
+              margin-right: 0.8rem;
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+          }
+        }
+
+        .tableRow:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      //에러 표시
+      .markerError {
+        display: none;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 1.5rem 0;
+        font-weight: 700;
+        color: $darkblue;
+
+        .errorIcon {
+          margin-right: 0.5333rem;
+        }
+      }
+    }
+    
+    .markerContents::after {
+      content: ' ';
+      position: absolute;
+      left: calc(50% - 0.8rem);
+      bottom: -0.6rem;
+      display: block;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color: $white;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      z-index: 10;
+    }
+  }
+
+  //포인트부분
+  .markerPoint {
+    position: absolute;
+    left: calc(50% - 0.5rem);
+    bottom: -2.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: $white;
+    border: 0.3rem solid $skyblue;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .markerPointBackgrond {
+    content: ' ';
+    position: absolute;
+    bottom: -3.6rem;
+    left: calc(50% - 1.6rem);
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: $skyblue;
+    opacity: 0.25;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+/*로딩중일시 안보이게*/
+.mapMarkerWrap.hide {
+  display: none;
+}
+
+/*라이트모드 색 지정*/
+body.light {
+  .mapMarkerWrap {
+    .markerContainer {
+      box-shadow: 0 0 1rem $shadowLight;
+    }
+  }
+}
+
+/*다크모드 색 지정*/
+body.dark {
+  .mapMarkerWrap {
+    .markerContainer {
+      box-shadow: 0 0 1rem $shadowDark;
+    }
+  }
+}
+
+/*addclass*/
+.mapMarkerWrap {
+  .markerTitle.red {
+    background-color: $red;
+  }
+  .markerContainer {
+    .markerContents {
+      .markerTable.on {
+        display: block;
+      }
+      .markerError.on {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+  }
+  .markerPoint.red {
+    border: 3px solid $red;
+  }
+  .markerPointBackgrond.red {
+    background-color: $red;
+  }
+}

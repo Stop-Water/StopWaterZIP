@@ -1,0 +1,520 @@
+@import "../../../scss/color";
+@import "../../../scss/fonts";
+@import "../../../scss/mixin";
+
+/*메뉴 공통*/
+.menuWrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width:10rem;
+    height: 100vh;
+    z-index: 80;
+    
+    .menuBackground{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display:none;
+    }
+
+    //기본메뉴
+    .menuContainer1{
+        position: relative;
+        height: 100%;
+        width: 10rem;
+        overflow: hidden;
+        transition: width 0.3s ;
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -ms-transition: width 0.3s;
+        -o-transition: width 0.3s;
+        
+        //메뉴
+        .topMenu{
+            margin-top: 10rem;
+            font-weight: 500;
+            font-size: $fontMedium;
+
+            .menuList>a{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                margin: 2.5rem 0;
+                height: 4.7rem;
+                line-height: 4.7rem;
+
+                .menuIcon{
+                    position: relative;
+                    left: 2.65rem;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    width: 4.7rem;
+                    height: 4.7rem;
+                    fill: $icon;
+                    color: $icon;
+                    border-radius: 1.4rem;
+                    -webkit-border-radius: 1.4rem;
+                    -moz-border-radius: 1.4rem;
+                    -ms-border-radius: 1.4rem;
+                    -o-border-radius: 1.4rem;
+
+                    svg{
+                        width: 2.2rem;
+                    }
+                }
+                
+                .menuName{
+                    position: absolute;
+                    left:  10rem;
+                    width: 20rem;
+                    color: $icon;
+                }
+            }
+        }
+
+        //모바일 로고
+        .mobileLogoWrap{
+            display: none;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            left: 1.5rem;
+            bottom: 5.5rem;
+
+            .smallLogo{
+                width: 4rem;
+                height: 4rem;
+                margin-right: 1.5rem;
+            }
+
+            .logoTitle{
+                line-height: 2.2rem;
+            }
+
+        }
+
+        //유저표시영역
+        .userNameWrap{
+            position: absolute;
+            padding: 1.5rem 0;
+            bottom: 9.5rem;
+            width: 100%;
+
+            .userIcon{
+                position: relative;
+                top: 0;
+                left: 3.15rem;
+                width: 3.7rem;
+                height: 3.7rem;
+                fill: $icon;
+                stroke: $icon;
+                transition: top 0.3s ;
+                -webkit-transition: top 0.3s ;
+                -moz-transition: top 0.3s ;
+                -ms-transition: top 0.3s ;
+                -o-transition: top 0.3s ;
+            }
+            
+            .userName{
+                margin-top:0.5rem;
+                width: 10rem;
+                text-align: center;
+                color: $icon;
+                transition: 0.3s ;
+                -webkit-transition: 0.3s ;
+                -moz-transition: 0.3s ;
+                -ms-transition: 0.3s ;
+                -o-transition: 0.3s ;
+            }
+            
+            .userText{
+                position: absolute;
+                top: calc(50% - 1.5rem);
+                left: 10rem;
+                width: 20rem;
+                height: 3rem;
+                line-height: 3rem;
+                color: $icon;
+                transition: left 0.3s ;
+                -webkit-transition: left 0.3s ;
+                -moz-transition: left 0.3s ;
+                -ms-transition: left 0.3s ;
+                -o-transition: left 0.3s ;
+            }
+        }
+
+        //푸터버튼
+        .footerBtn{
+            position: absolute;
+            left: 1.5rem;
+            bottom: 2rem;
+            color: $icon;
+            fill: $skyblue;
+            cursor: pointer;
+
+            .showCopy{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-top: 0.5rem;
+                font-weight: 500;
+                opacity: 0.55;
+
+                span{
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+
+        
+        //모바일 X버튼
+        .mobileXbtn{
+            position: absolute;
+            display:none;
+            cursor: pointer;
+            padding: 1.3rem 0.45rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+
+            .mobileX{
+                display:block;
+                width: 2.4rem;
+                height: 0.2rem;
+                border-radius:0.2rem;
+                -webkit-border-radius:0.2rem;
+                -moz-border-radius:0.2rem;
+                -ms-border-radius:0.2rem;
+                -o-border-radius:0.2rem;
+                background-color:$icon;
+            }
+
+            .mobileX1{
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+            }
+            .mobileX2{
+                transform: rotate(-45deg) translate(0.1rem, -0.2rem);
+                -webkit-transform: rotate(-45deg) translate(0.1rem, -0.2rem);
+                -moz-transform: rotate(-45deg) translate(0.1rem, -0.2rem);
+                -ms-transform: rotate(-45deg) translate(0.1rem, -0.2rem);
+                -o-transform: rotate(-45deg) translate(0.1rem, -0.2rem);
+            }           
+        }
+
+    }
+
+    //마우스호버
+    .menuContainer1:hover{
+        width: 25rem;
+
+        .userNameWrap{
+            .userIcon{
+                top: 1.2rem;
+            }
+            .userName{
+                opacity: 0;
+            }
+            .userText{
+                left: 9rem;
+            }
+        }
+    }
+
+    //관리자메뉴-web
+    .menuContainer2{
+        display:none;
+        height: 100vh;
+        width: 18rem;
+        overflow: hidden;
+        font-size: $fontMedium;
+
+        .topMenu{
+            margin-top: 10rem;
+            
+            .menuList a{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                height: 4.5rem;
+                color: $icon;
+                text-indent: 2rem;
+            }
+        }
+    }
+
+}
+
+
+
+/* 라이트모드 색 지정*/
+body.light{
+    .menuWrap{
+        .menuBackground{
+            background-color:$menuBackgroundLight;
+        }
+
+        .menuContainer1{
+            background-color:$barLight;
+
+            .mobileLogoWrap{
+                color: $textLight;
+            }
+
+            .userNameWrap{
+                background-color:$mobileMenuLight;
+            }
+        }
+
+        .menuContainer2{
+            background-color:$menuBarLight;
+
+            .menuList.on{
+                background-color:$tableTopLight;
+            }
+        }
+    }
+}
+
+/* 다크모드 색 지정*/
+body.dark{
+    .menuWrap{
+        .menuBackground{
+            background-color:$menuBackgroundDark;
+        }
+
+        .menuContainer1{
+            background-color:$barDark;
+            
+            .mobileLogoWrap{
+                color: $textDark;
+            }
+
+            .userNameWrap{
+                background-color:$mobileMenuDark;
+            }
+        }
+        .menuContainer2{
+            background-color:$menuBarDark;
+
+            .menuList.on{
+                background-color:$tableTopDark;
+            }
+        }
+    } 
+}
+
+
+
+/*모바일 미디어쿼리*/
+@include mobile {
+    
+    //모바일일때 한정 색변화 - 라이트, 다크
+    body.light{
+        .menuWrap.onMobile{
+            .menuContainer1{
+                box-shadow: 0 0 10px $shadowLight;
+            }
+
+             .menuContainer2{
+                background-color:$menuBackgroundLight;
+
+                .menuList{
+                    background-color:$mobileMenuLight;
+                }
+                .menuList.on a{
+                        background-color: $tableTopLight;
+                    }
+            }
+        } 
+    }
+
+    body.dark{
+        .menuWrap.onMobile{
+            .menuContainer1{
+                box-shadow: 0 0 10px $shadowDark;
+            }
+
+            .menuContainer2{
+                background-color:$menuBackgroundDark;
+
+                .menuList{
+                    background-color:$mobileMenuDark;
+                }
+                
+                .menuList.on a{
+                    background-color: $tableTopDark
+                }
+            }
+        }   
+    }
+
+    //모바일 메뉴 공통
+    .menuWrap{
+        min-width: 0;
+        width: 0;
+        z-index: 100;
+
+        .menuContainer1{
+            left: -60%;
+            width: 60%;
+            transition: left 0.3s;
+            -webkit-transition: left 0.3s;
+            -moz-transition: left 0.3s;
+            -ms-transition: left 0.3s;
+            -o-transition: left 0.3s;
+            
+            .topMenu{
+                .menuList>a{
+                    .menuIcon{
+                        left: 2rem;
+                    }
+                    .menuName{
+                        left: 9rem;
+                    }
+                }
+            }
+            
+            .mobileXbtn{
+                display:block;
+            }
+
+            .mobileLogoWrap{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            }
+
+            .userNameWrap{
+                bottom: 13rem;
+
+                .userName{
+                    display:none;
+                }
+                .userText{
+                    left: 9rem;
+                }
+            }
+
+            .footerBtn{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                .showCopy{
+                    -webkit-box-orient: horizontal;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    margin-top: 0;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+
+        .menuContainer1:hover{
+            width: 60%;
+
+            .userNameWrap{
+                .userIcon{
+                    top: 0;
+                }
+            }
+        }
+        
+        .menuContainer2{
+            position: absolute;
+            top: 38rem;
+            left: -60%;
+            width: 60%;
+            height: 13.5rem;
+            z-index: 100;
+            transition: left 0.3s;
+            -webkit-transition: left 0.3s;
+            -moz-transition: left 0.3s;
+            -ms-transition: left 0.3s;
+            -o-transition: left 0.3s;
+            
+            .topMenu{
+                position: relative;
+                margin-top:0;
+            }
+        }
+    }
+
+    .menuWrap.onMobile{    
+         width:100%;
+        
+        .menuBackground{
+            display:block;
+        }
+    }
+}
+
+
+/*메뉴 클릭 시 addclass*/
+.menuWrap{
+    .menuContainer1{
+        .menuList.on a{
+            .menuIcon{
+                background-color:$skyblue;
+                fill: $white !important;    
+            }
+            .menuName{
+                color: $skyblue !important;
+            }  
+        }
+    }
+
+    .menuContainer2.on{
+        display:block;
+
+        .topMenu{
+            top: 0;
+
+            .menuList.on a{
+                color: $skyblue !important;
+            }
+
+            .menuList.on::before{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0.3rem;
+                height: 4.5rem;
+                background-color:$skyblue;
+            }
+        }  
+    }
+}
+
+.menuWrap.onMobile{
+    .menuContainer1{
+        left: 0;
+    }
+    .menuContainer2{
+        left: 0;
+    }
+}

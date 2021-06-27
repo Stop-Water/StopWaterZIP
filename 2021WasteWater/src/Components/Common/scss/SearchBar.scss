@@ -1,0 +1,376 @@
+@import '../../../scss/color';
+@import '../../../scss/fonts';
+@import '../../../scss/mixin';
+
+/*서치바 전체*/
+.searchBarWrap {
+  width: 100%;
+  height: 6rem;
+  margin: 3rem 0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+
+  .searchListGroup {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 2rem;
+    height: 100%;
+
+    .searchList {
+      display: none;
+      margin-right: 2rem;
+
+      .searchListName {
+        margin-right: 1rem;
+        font-size: $fontMedium;
+      }
+
+      .searchListSelect {
+        padding: 0 0.5rem;
+        width: 13rem;
+        height: 3.5rem;
+        font-size: $fontDefault;
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+      }
+
+      input[type='date']::-webkit-calendar-picker-indicator,
+      input[type='month']::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 0;
+        display: block;
+        height: 1.55rem;
+        border-width: thin;
+        background-size: cover cover;
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+      }
+
+      input[type='date']::-webkit-calendar-picker-indicator:focus,
+      input[type='month']::-webkit-calendar-picker-indicator:focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    .searchList.name {
+      .searchListSelect {
+        width: 28rem;
+      }
+    }
+
+    .searchList.date {
+      .searchListSelect {
+        position: relative;
+      }
+
+      .datespan {
+        padding: 0 0.5rem;
+      }
+    }
+
+    //검색버튼
+    .searchBtn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      min-width: 9.7rem;
+      height: 3.5rem;
+      border: none;
+      color: $white;
+      background-color: $skyblue;
+      font-size: $fontDefault;
+      cursor: pointer;
+      border-radius: 1.8rem;
+      -webkit-border-radius: 1.8rem;
+      -moz-border-radius: 1.8rem;
+      -ms-border-radius: 1.8rem;
+      -o-border-radius: 1.8rem;
+
+      .searchIcon {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+/*라이트모드 색 지정*/
+body.light {
+  .searchBarWrap {
+    background-color: $tableTopLight;
+
+    .searchListGroup {
+      .searchList {
+        .searchListSelect {
+          border: 1px solid $black;
+          background-color: $white;
+        }
+
+        input[type='date']::-webkit-calendar-picker-indicator,
+        input[type='month']::-webkit-calendar-picker-indicator {
+          background: url(../../../Img/calendarLight.svg) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+/*다크모드 색 지정*/
+body.dark {
+  .searchBarWrap {
+    background-color: $tableTopDark;
+
+    .searchListGroup {
+      .searchList {
+        .searchListSelect {
+          border: 1px solid $skyblue;
+          color: $skyblue;
+          background-color: $menuBarDark;
+        }
+
+        input[type='date']::-webkit-calendar-picker-indicator,
+        input[type='month']::-webkit-calendar-picker-indicator {
+          background: url(../../../Img/calendarDark.svg) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+/*페이지별*/
+//통계페이지
+.statisticsPage {
+  .searchBarWrap {
+    .searchListGroup {
+      .searchList.name,
+      .searchList.date,
+      .searchList.data {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+    }
+  }
+}
+//관리자-측정소정보관리 페이지
+.adminPage {
+  .admin1Wrap {
+    .searchBarWrap {
+      .searchListGroup {
+        .searchList.name {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+//관리자-데이터관리 페이지
+.adminPage {
+  .admin2Wrap {
+    .searchBarWrap {
+      .searchListGroup {
+        .searchList.name,
+        .searchList.data,
+        .searchList.date{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+//관리자-사용자관리 페이지
+.adminPage {
+  .admin3Wrap {
+    .searchBarWrap {
+      .searchListGroup {
+        .searchList.team {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+/*미디어쿼리*/
+
+//관리자-데이터정보관리 전용
+@include admin2 {
+  .adminPage {
+    .admin2Wrap {
+      .searchBarWrap {
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        .searchListGroup {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding-right: 12rem;
+
+          .searchList {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .searchBtn {
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+      }
+    }
+  }
+}
+
+@include web-s {
+  .adminPage {
+    .admin2Wrap {
+      .searchBarWrap {
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+
+        .searchListGroup {
+          .searchList {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .searchBtn {
+        position: absolute;
+        right: 2rem;
+        bottom: 1rem;
+      }
+    }
+  }
+}
+
+@include tablet{
+  .adminPage{
+    .admin2Wrap{
+      .searchBarWrap{
+        .searchListGroup{
+          padding-bottom: 3.5rem;
+
+          .searchList{
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include web-s {
+  .searchBarWrap {
+    .searchListGroup {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding-right: 12rem;
+    }
+  }
+
+  .searchBtn {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+}
+
+@include tablet {
+  .searchBarWrap {
+    height: auto;
+    padding: 2rem 0;
+
+    .searchListGroup {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-orient: vertical;
+      -ms-flex-direction: column;
+      flex-direction: column;
+
+      .searchList {
+        width: 100%;
+
+        .searchListName {
+          display: block;
+          width: 9rem;
+        }
+
+        .searchListSelect {
+          width: calc(100% - 9rem);
+        }
+      }
+
+      .searchList.name {
+        .searchListSelect {
+          width: calc(100% - 9rem);
+        }
+      }
+
+      .searchList.date {
+        .searchListSelect {
+          width: calc(50% - 5.5rem);
+        }
+      }
+
+      .searchBtn {
+        position: absolute;
+        right: 2rem;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@include mobile-s {
+  .searchBarWrap {
+    .searchListGroup {
+      .searchList {
+        .searchListSelect {
+          text-indent: 0.5rem;
+        }
+      }
+    }
+  }
+}
